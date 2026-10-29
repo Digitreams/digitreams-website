@@ -1,0 +1,357 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="description" content="How Digitreams collects, uses and protects your personal data, and how to opt out of marketing emails." />
+    <link rel="icon" href="data:," />
+    <title>Digitreams — Privacy Policy</title>
+    <style>
+      :root{
+        color-scheme: dark;
+        --bg:#050505;
+        --bg-2:#0b0b0b;
+        --panel:#101010;
+        --line:#242424;
+        --line-soft:#1b1b1b;
+        --text:#f4f2ec;
+        --muted:#a8a49a;
+        --muted-2:#7d7a72;
+        --amber:#ffb800;
+        --amber-dim:rgba(255,184,0,.12);
+        --radius:14px;
+        --max:760px;
+      }
+      *{box-sizing:border-box}
+      html{scroll-behavior:smooth}
+      body{
+        margin:0;
+        background:var(--bg);
+        color:var(--text);
+        font-family:"Helvetica Neue",Helvetica,Arial,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;
+        font-size:17px;
+        line-height:1.7;
+        -webkit-font-smoothing:antialiased;
+        text-rendering:optimizeLegibility;
+      }
+      a{color:var(--amber);text-decoration:none}
+      a:hover{text-decoration:underline;text-underline-offset:3px}
+      a:focus-visible, button:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:4px}
+
+      /* ---------- Header ---------- */
+      .site-header{
+        position:sticky;top:0;z-index:20;
+        background:rgba(5,5,5,.88);
+        backdrop-filter:blur(10px);
+        -webkit-backdrop-filter:blur(10px);
+        border-bottom:1px solid var(--line-soft);
+      }
+      .header-inner{
+        max-width:1080px;margin:0 auto;
+        padding:16px 24px;
+        display:flex;align-items:center;justify-content:space-between;gap:16px;
+      }
+      .wordmark{
+        font-size:20px;font-weight:800;letter-spacing:.14em;color:var(--text);
+        text-transform:uppercase;line-height:1;white-space:nowrap;
+      }
+      .wordmark:hover{text-decoration:none}
+      .wordmark .dot{color:var(--amber)}
+      .back-link{
+        font-size:14px;font-weight:600;color:var(--muted);
+        display:inline-flex;align-items:center;gap:8px;white-space:nowrap;
+        padding:10px 14px;border:1px solid var(--line);border-radius:999px;
+        transition:color .15s ease,border-color .15s ease;
+      }
+      .back-link:hover{color:var(--text);border-color:#3a3a3a;text-decoration:none}
+      .back-link svg{flex:none}
+
+      /* ---------- Layout ---------- */
+      .wrap{max-width:var(--max);margin:0 auto;padding:0 24px}
+      main{padding:64px 0 8px}
+
+      .kicker{
+        display:inline-flex;align-items:center;gap:10px;
+        font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+        color:var(--amber);margin:0 0 20px;
+      }
+      .kicker::before{content:"";width:28px;height:1px;background:var(--amber)}
+      h1{
+        font-size:clamp(40px,7vw,58px);line-height:1.05;font-weight:800;
+        letter-spacing:-.02em;margin:0 0 16px;
+      }
+      .updated{color:var(--muted);font-size:15px;margin:0 0 28px}
+      .lede{
+        font-size:19px;line-height:1.65;color:#d9d6cd;margin:0 0 8px;max-width:62ch;
+      }
+      .lede strong{color:var(--text)}
+
+      /* ---------- On this page ---------- */
+      .toc{
+        margin:36px 0 8px;padding:20px 22px;
+        background:var(--bg-2);border:1px solid var(--line-soft);border-radius:var(--radius);
+      }
+      .toc p{
+        margin:0 0 12px;font-size:12px;font-weight:700;letter-spacing:.18em;
+        text-transform:uppercase;color:var(--muted-2);
+      }
+      .toc ol{
+        margin:0;padding:0;list-style:none;
+        display:grid;grid-template-columns:1fr 1fr;gap:6px 24px;
+        counter-reset:toc;
+      }
+      .toc li{counter-increment:toc}
+      .toc a{
+        color:#cfccc3;font-size:15px;font-weight:500;
+        display:flex;gap:10px;align-items:baseline;padding:4px 0;
+      }
+      .toc a::before{
+        content:counter(toc,decimal-leading-zero);
+        color:var(--amber);font-size:12px;font-weight:700;letter-spacing:.05em;flex:none;
+      }
+      .toc a:hover{color:var(--amber);text-decoration:none}
+
+      /* ---------- Sections ---------- */
+      section.policy{
+        padding:38px 0 6px;
+        border-bottom:1px solid var(--line-soft);
+        scroll-margin-top:96px;
+      }
+      section.policy:last-of-type{border-bottom:0}
+      .sec-head{display:flex;align-items:baseline;gap:16px;margin:0 0 14px}
+      .sec-num{
+        color:var(--amber);font-size:13px;font-weight:800;letter-spacing:.1em;flex:none;
+        font-variant-numeric:tabular-nums;
+      }
+      h2{
+        font-size:clamp(21px,3.4vw,25px);line-height:1.25;font-weight:700;
+        letter-spacing:-.01em;margin:0;color:var(--amber);
+      }
+      section.policy p{margin:0 0 14px;color:#cfccc3;max-width:66ch}
+      section.policy p:last-child{margin-bottom:8px}
+      ul.points{margin:0 0 16px;padding:0;list-style:none;max-width:66ch}
+      ul.points li{
+        position:relative;padding:3px 0 3px 24px;color:#cfccc3;
+      }
+      ul.points li::before{
+        content:"";position:absolute;left:2px;top:.78em;
+        width:7px;height:7px;border-radius:50%;background:var(--amber);
+      }
+      ul.points li strong{color:var(--text);font-weight:700}
+
+      .callout{
+        margin:6px 0 14px;padding:18px 20px;
+        background:var(--amber-dim);border:1px solid rgba(255,184,0,.28);
+        border-radius:var(--radius);
+      }
+      .callout p{margin:0;color:var(--text);font-size:17px}
+      .callout p strong{font-weight:800}
+
+      /* ---------- Contact ---------- */
+      .contact-card{
+        margin:8px 0 14px;padding:24px;
+        background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+      }
+      .contact-email{
+        display:inline-block;font-size:19px;font-weight:700;color:var(--amber);
+        margin:0 0 20px;word-break:break-all;
+      }
+      .addr-list{list-style:none;margin:0;padding:0;display:grid;gap:14px}
+      .addr-list li{display:flex;align-items:flex-start;gap:14px}
+      .addr-list p{margin:0;color:var(--text);font-weight:700;font-size:16.5px;line-height:1.5}
+      .flag{
+        flex:none;width:32px;height:32px;border-radius:50%;overflow:hidden;
+        border:1px solid rgba(255,255,255,.22);margin-top:1px;
+        box-shadow:0 0 0 3px rgba(255,255,255,.04);
+      }
+      .flag svg{display:block;width:100%;height:100%}
+
+      /* ---------- Footer ---------- */
+      footer{
+        margin-top:56px;border-top:1px solid var(--line-soft);
+        background:var(--bg-2);
+      }
+      .footer-inner{
+        max-width:1080px;margin:0 auto;padding:26px 24px;
+        display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center;justify-content:space-between;
+      }
+      .footer-inner p{margin:0;font-size:14px;color:var(--muted-2)}
+      .footer-links{display:flex;gap:22px;flex-wrap:wrap}
+      .footer-links a{font-size:14px;font-weight:600;color:var(--muted)}
+      .footer-links a:hover{color:var(--amber);text-decoration:none}
+      .footer-links a[aria-current="page"]{color:var(--text)}
+
+      @media (max-width:640px){
+        body{font-size:16.5px}
+        .header-inner{padding:14px 18px}
+        .wordmark{font-size:18px}
+        .back-link{padding:9px 12px;font-size:13.5px}
+        .wrap{padding:0 18px}
+        main{padding:44px 0 4px}
+        .lede{font-size:17.5px}
+        .toc ol{grid-template-columns:1fr}
+        section.policy{padding:32px 0 4px}
+        .contact-card{padding:20px 18px}
+        .addr-list p{font-size:16px}
+        .flag{width:30px;height:30px}
+        .footer-inner{padding:22px 18px}
+      }
+      @media (prefers-reduced-motion:reduce){
+        html{scroll-behavior:auto}
+      }
+    </style>
+  </head>
+  <body>
+    <header class="site-header">
+      <div class="header-inner">
+        <a class="wordmark" href="index.html">Digitreams<span class="dot">.</span></a>
+        <a class="back-link" href="index.html">
+          <svg width="15" height="15" viewBox="0 0 24 24" fill="none" aria-hidden="true"><path d="M19 12H5m0 0 6-6m-6 6 6 6" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg>
+          Back to home
+        </a>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrap">
+        <p class="kicker">Legal</p>
+        <h1>Privacy Policy</h1>
+        <p class="updated">Last updated. 29 October 2026</p>
+        <p class="lede">This page explains, in plain English, what information Digitreams collects, why we collect it, and the choices you have. <strong>We keep it simple. We never sell your personal data.</strong></p>
+
+        <nav class="toc" aria-label="On this page">
+          <p>On this page</p>
+          <ol>
+            <li><a href="#what-we-collect">What we collect</a></li>
+            <li><a href="#how-we-use-it">How we use it</a></li>
+            <li><a href="#what-we-never-do">What we never do</a></li>
+            <li><a href="#cookies-and-tracking">Cookies and tracking</a></li>
+            <li><a href="#sharing">Sharing</a></li>
+            <li><a href="#your-rights">Your rights</a></li>
+            <li><a href="#opting-out">Opting out</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ol>
+        </nav>
+
+        <section class="policy" id="what-we-collect">
+          <div class="sec-head"><span class="sec-num">01</span><h2>What we collect</h2></div>
+          <p>We only collect what we need to reply to you, run your audit, and deliver our services.</p>
+          <ul class="points">
+            <li><strong>Details you give us.</strong> Your name, business name, email address, and phone or WhatsApp number, shared when you request a free audit or get in touch with us.</li>
+            <li><strong>Website usage data.</strong> Pages you visit, how long you stay, and the device and browser you use, so we can see what is working on the site.</li>
+            <li><strong>Advertising interaction data.</strong> Information from platforms such as Meta and Google about how people respond to our ads, including clicks and enquiries that start from an ad.</li>
+          </ul>
+          <p>If you only browse the website and never contact us, we hold no name, email address, or phone number for you.</p>
+        </section>
+
+        <section class="policy" id="how-we-use-it">
+          <div class="sec-head"><span class="sec-num">02</span><h2>How we use it</h2></div>
+          <ul class="points">
+            <li>To reply to your enquiries.</li>
+            <li>To prepare and deliver your free audit.</li>
+            <li>To book and run audit calls with you.</li>
+            <li>To provide the services you have asked us for.</li>
+            <li>To improve our website and how it works.</li>
+            <li>To measure our advertising campaigns, so we know which ads bring real enquiries.</li>
+          </ul>
+          <p>We do not use your details for anything unrelated to the reason you shared them.</p>
+        </section>
+
+        <section class="policy" id="what-we-never-do">
+          <div class="sec-head"><span class="sec-num">03</span><h2>What we never do</h2></div>
+          <div class="callout">
+            <p><strong>We never sell your personal data.</strong> Not to advertisers, not to data brokers, not to anyone.</p>
+          </div>
+          <p>We also never rent or trade your details, and we never add you to a marketing list you did not ask to join.</p>
+        </section>
+
+        <section class="policy" id="cookies-and-tracking">
+          <div class="sec-head"><span class="sec-num">04</span><h2>Cookies and tracking</h2></div>
+          <p>Our website may use tools such as Google Analytics and the Meta Pixel. These help us understand how people find and use the site, and let us measure whether our advertising is working.</p>
+          <p>Cookies are small files stored by your browser. You can block or delete them at any time in your browser settings. The website will still work, although our visit statistics become less accurate.</p>
+        </section>
+
+        <section class="policy" id="sharing">
+          <div class="sec-head"><span class="sec-num">05</span><h2>Sharing</h2></div>
+          <p>We share personal data only with the service providers we need to run the business, and only as far as they need it to do their job.</p>
+          <ul class="points">
+            <li><strong>Email services,</strong> so we can send and receive messages.</li>
+            <li><strong>Hosting providers,</strong> so the website stays online.</li>
+            <li><strong>Advertising platforms</strong> such as Meta and Google, so campaigns can be measured and improved.</li>
+          </ul>
+          <p>We may also share information if the law requires us to. Beyond that, your details stay with us.</p>
+        </section>
+
+        <section class="policy" id="your-rights">
+          <div class="sec-head"><span class="sec-num">06</span><h2>Your rights</h2></div>
+          <p>Your data belongs to you. At any time, you can ask us to show you the personal data we hold about you, correct anything that is wrong, or delete it completely.</p>
+          <p>Send your request to <a href="mailto:info@digitreams.com">info@digitreams.com</a> and we will act on it. There is no charge and no form to fill in.</p>
+        </section>
+
+        <section class="policy" id="opting-out">
+          <div class="sec-head"><span class="sec-num">07</span><h2>Opting out</h2></div>
+          <p>You can leave our marketing emails at any time. Use the unsubscribe link in any marketing email we send, or go straight to our <a href="opt-out.html">Opt out</a> page.</p>
+          <p>Opting out stops marketing emails only. If you are a client, we will still send the messages needed to deliver your service.</p>
+        </section>
+
+        <section class="policy" id="contact">
+          <div class="sec-head"><span class="sec-num">08</span><h2>Contact</h2></div>
+          <p>Questions about this policy or about your data are welcome. Write to us any time.</p>
+          <div class="contact-card">
+            <a class="contact-email" href="mailto:info@digitreams.com">info@digitreams.com</a>
+            <ul class="addr-list">
+              <li>
+                <span class="flag" role="img" aria-label="Flag of the United States">
+                  <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+                    <defs><clipPath id="clip-us"><circle cx="20" cy="20" r="20"/></clipPath></defs>
+                    <g clip-path="url(#clip-us)">
+                      <rect width="40" height="40" fill="#fff"/>
+                      <rect y="0" width="40" height="3.4" fill="#b22234"/><rect y="6.8" width="40" height="3.4" fill="#b22234"/>
+                      <rect y="13.6" width="40" height="3.4" fill="#b22234"/><rect y="20.4" width="40" height="3.4" fill="#b22234"/>
+                      <rect y="27.2" width="40" height="3.4" fill="#b22234"/><rect y="34" width="40" height="3.4" fill="#b22234"/>
+                      <rect width="19" height="18" fill="#3c3b6e"/>
+                      <g fill="#fff">
+                        <circle cx="3" cy="3" r="1.1"/><circle cx="7" cy="3" r="1.1"/><circle cx="11" cy="3" r="1.1"/><circle cx="15" cy="3" r="1.1"/>
+                        <circle cx="5" cy="6.5" r="1.1"/><circle cx="9" cy="6.5" r="1.1"/><circle cx="13" cy="6.5" r="1.1"/><circle cx="17" cy="6.5" r="1.1"/>
+                        <circle cx="3" cy="10" r="1.1"/><circle cx="7" cy="10" r="1.1"/><circle cx="11" cy="10" r="1.1"/><circle cx="15" cy="10" r="1.1"/>
+                        <circle cx="5" cy="13.5" r="1.1"/><circle cx="9" cy="13.5" r="1.1"/><circle cx="13" cy="13.5" r="1.1"/><circle cx="17" cy="13.5" r="1.1"/>
+                      </g>
+                    </g>
+                  </svg>
+                </span>
+                <p>5510 Cherokee Ave, Suite 300, #1241, Alexandria, Virginia 22312</p>
+              </li>
+              <li>
+                <span class="flag" role="img" aria-label="Flag of Pakistan">
+                  <svg viewBox="0 0 40 40" aria-hidden="true" focusable="false">
+                    <defs><clipPath id="clip-pk"><circle cx="20" cy="20" r="20"/></clipPath></defs>
+                    <g clip-path="url(#clip-pk)">
+                      <rect width="40" height="40" fill="#01411c"/>
+                      <rect width="11" height="40" fill="#fff"/>
+                      <path fill="#fff" d="M29.6 12.2a6.4 6.4 0 1 0 3.1 8.4 5.2 5.2 0 1 1-3.1-8.4z"/>
+                      <path fill="#fff" d="M32.4 11.4l.9 2 2.2.2-1.7 1.4.5 2.1-1.9-1.2-1.9 1.2.5-2.1-1.7-1.4 2.2-.2z"/>
+                    </g>
+                  </svg>
+                </span>
+                <p>Digitreams, Pairs Colony, Daroghawala, Lahore</p>
+              </li>
+            </ul>
+          </div>
+          <p>If this policy changes, the updated version will be published on this page with a new date at the top.</p>
+        </section>
+      </div>
+    </main>
+
+    <footer>
+      <div class="footer-inner">
+        <p>© 2026 Digitreams. All rights reserved.</p>
+        <nav class="footer-links" aria-label="Footer">
+          <a href="index.html">Home</a>
+          <a href="privacy-policy.html" aria-current="page">Privacy Policy</a>
+          <a href="opt-out.html">Opt out</a>
+        </nav>
+      </div>
+    </footer>
+  </body>
+</html>

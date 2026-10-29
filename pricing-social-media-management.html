@@ -1,0 +1,313 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <link rel="icon" href="data:," />
+    <title>Social Media Management Pricing — Digitreams</title>
+    <meta name="description" content="Social Media Management pricing from Digitreams. Content, posting and community management with no hidden fees and no lock-in contracts. Every plan includes an onboarding call and weekly reports." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@500;600;700;800&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      :root{
+        --bg:#060607;
+        --bg-2:#0b0b0d;
+        --panel:#101013;
+        --panel-2:#16161a;
+        --line:rgba(255,255,255,.09);
+        --line-strong:rgba(255,255,255,.22);
+        --line-amber:rgba(255,184,0,.35);
+        --amber:#ffb800;
+        --amber-soft:#ffcf4d;
+        --amber-dim:rgba(255,184,0,.08);
+        --red:#e5484d;
+        --text:#f4f2ec;
+        --muted:#b6b3a8;
+        --muted-2:#8b887e;
+        --ink-on-amber:#0b0a06;
+        --radius:18px;
+        --maxw:1240px;
+      }
+      *{box-sizing:border-box}
+      html{scroll-behavior:smooth}
+      html,body{background:var(--bg)}
+      body{
+        margin:0;color:var(--text);
+        font-family:"Manrope",system-ui,sans-serif;
+        font-size:17px;line-height:1.65;
+        overflow-x:hidden;-webkit-font-smoothing:antialiased;
+      }
+      ::selection{background:var(--amber);color:var(--ink-on-amber)}
+      h1,h2,h3{font-family:"Sora",sans-serif;line-height:1.08;margin:0;letter-spacing:-.01em}
+      p{margin:0}
+      a{color:inherit;text-decoration:none}
+      .wrap{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+
+      /* ---------- Header ---------- */
+      header{
+        position:sticky;top:0;z-index:50;
+        background:rgba(6,6,7,.86);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+        border-bottom:1px solid var(--line);
+      }
+      .head-in{display:flex;align-items:center;justify-content:space-between;gap:16px;padding:16px 0}
+      .wordmark{font-family:"Sora",sans-serif;font-weight:800;font-size:22px;letter-spacing:.02em}
+      .wordmark .dot{color:var(--amber)}
+      .head-links{display:flex;align-items:center;gap:10px;flex-wrap:wrap}
+      .head-links a{
+        font-size:14.5px;font-weight:600;color:var(--muted);
+        padding:10px 16px;border:1px solid var(--line);border-radius:999px;
+        transition:color .2s,border-color .2s,background .2s;
+      }
+      .head-links a:hover{color:var(--text);border-color:var(--line-strong)}
+      .head-links a.primary{color:var(--ink-on-amber);background:var(--amber);border-color:var(--amber)}
+      .head-links a.primary:hover{background:var(--amber-soft)}
+
+      /* ---------- Hero ---------- */
+      .hero{padding:72px 0 20px;text-align:left}
+      .sec-tag{
+        display:inline-block;font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600;
+        letter-spacing:.18em;text-transform:uppercase;color:var(--amber);
+        border:1px solid var(--line-amber);background:var(--amber-dim);
+        padding:7px 14px;border-radius:999px;margin-bottom:22px;
+      }
+      .hero h1{font-size:clamp(38px,6vw,64px);font-weight:800}
+      .hero h1 .amber{color:var(--amber)}
+      .hero .intro{margin-top:20px;max-width:720px;color:var(--muted);font-size:18px}
+
+      /* ---------- Tier cards ---------- */
+      .tiers{
+        display:grid;grid-template-columns:repeat(3,1fr);gap:22px;
+        padding:44px 0 30px;align-items:stretch;
+      }
+      .tier{
+        position:relative;display:flex;flex-direction:column;
+        background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+        padding:30px 28px 28px;
+      }
+      .tier.featured{border-color:var(--line-amber);background:var(--panel-2)}
+      .badges{display:flex;gap:8px;flex-wrap:wrap;margin-bottom:20px;min-height:26px}
+      .badge{
+        font-family:"IBM Plex Mono",monospace;font-size:11.5px;font-weight:600;letter-spacing:.1em;
+        padding:5px 11px;border-radius:999px;text-transform:uppercase;
+      }
+      .badge-off{background:var(--red);color:#fff}
+      .badge-best{background:var(--amber);color:var(--ink-on-amber)}
+      .tier h2{font-size:24px;font-weight:700;line-height:1.2}
+      .tier .plan-sub{margin-top:6px;font-family:"IBM Plex Mono",monospace;font-size:13px;color:var(--muted-2);letter-spacing:.04em}
+      .price-block{margin:24px 0 6px}
+      .was-row{display:flex;align-items:center;gap:10px;font-size:14px;color:var(--muted-2)}
+      .was-row .price-orig{text-decoration:line-through}
+      .was-save{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:600;letter-spacing:.08em;color:var(--red);border:1px solid rgba(229,72,77,.45);padding:2px 8px;border-radius:999px}
+      .price-row{display:flex;align-items:baseline;gap:8px;margin-top:4px;flex-wrap:wrap}
+      .price{font-family:"Sora",sans-serif;font-size:44px;font-weight:800;line-height:1;color:var(--text)}
+      .per{color:var(--muted);font-size:15px;font-weight:600}
+      .from-lab{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--amber);display:block;margin-bottom:8px}
+      .feat{list-style:none;margin:20px 0 26px;padding:20px 0 0;border-top:1px solid var(--line);display:flex;flex-direction:column;gap:11px}
+      .feat li{display:flex;gap:11px;align-items:flex-start;font-size:15.5px;color:var(--muted);line-height:1.5}
+      .feat li strong{color:var(--text)}
+      .feat svg{flex:0 0 auto;width:18px;height:18px;margin-top:3px;color:var(--amber)}
+      .btn{
+        margin-top:auto;display:block;text-align:center;
+        font-weight:800;font-size:16px;padding:15px 20px;border-radius:12px;
+        transition:background .2s,transform .2s;
+      }
+      .btn-amber{background:var(--amber);color:var(--ink-on-amber)}
+      .btn-amber:hover{background:var(--amber-soft)}
+      .btn-ghost{border:1px solid var(--line-strong);color:var(--text)}
+      .btn-ghost:hover{border-color:var(--amber);color:var(--amber)}
+
+      .honesty{color:var(--muted-2);font-size:14.5px;text-align:center;padding:6px 0 8px}
+
+      /* ---------- Included strip ---------- */
+      .included{padding:44px 0 10px}
+      .included h2{font-size:clamp(24px,3.4vw,32px);font-weight:700}
+      .included h2 .amber{color:var(--amber)}
+      .inc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px;margin-top:26px}
+      .inc{background:var(--bg-2);border:1px solid var(--line);border-radius:var(--radius);padding:24px}
+      .inc h3{font-size:17px;font-weight:700;margin-bottom:8px}
+      .inc p{color:var(--muted);font-size:15px}
+
+      /* ---------- Footer ---------- */
+      footer{border-top:1px solid var(--line);margin-top:56px;padding:26px 0 34px}
+      .foot-in{display:flex;align-items:center;justify-content:space-between;gap:14px;flex-wrap:wrap}
+      .foot-in p{color:var(--muted-2);font-size:14px}
+      .foot-links{display:flex;gap:22px}
+      .foot-links a{color:var(--muted);font-size:14px;font-weight:600}
+      .foot-links a:hover{color:var(--amber)}
+      .foot-currency{margin-top:14px;font-size:12.5px;color:var(--muted-2)}
+
+      @media (max-width:900px){
+        .tiers{grid-template-columns:1fr}
+        .inc-grid{grid-template-columns:1fr}
+        .hero{padding:52px 0 12px}
+        .price{font-size:40px}
+      }
+      @media (max-width:480px){
+        body{font-size:16px}
+        .wrap{padding:0 18px}
+        .head-in{flex-wrap:nowrap;padding:13px 0}
+        .head-links{flex-wrap:nowrap;gap:8px}
+        .head-links a{padding:8px 12px;font-size:13px;white-space:nowrap}
+        .wordmark{font-size:18px}
+        .tier{padding:26px 22px 24px}
+        .btn{padding:15px 16px}
+      }
+      @media (prefers-reduced-motion:reduce){
+        html{scroll-behavior:auto}
+      }
+    </style>
+  </head>
+  <body>
+    <header>
+      <div class="wrap head-in">
+        <a class="wordmark" href="index.html">DIGITREAMS<span class="dot">.</span></a>
+        <nav class="head-links" aria-label="Page">
+          <a href="index.html#pricing">All pricing</a>
+          <a class="primary" href="index.html">Back to home</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <section class="hero">
+        <div class="wrap">
+          <span class="sec-tag">Pricing</span>
+          <h1>Social Media Management <span class="amber">Pricing</span></h1>
+          <p class="intro">Content, posting and community management that keeps your brand active and growing. No hidden fees. No lock-in contracts. Every plan includes an onboarding call and weekly reports.</p>
+        </div>
+      </section>
+
+      <section>
+        <div class="wrap">
+          <div class="tiers">
+            <!-- Starter -->
+            <article class="tier">
+              <div class="badges"><span class="badge badge-off">40% OFF</span></div>
+              <h2>Starter — 10 Days Kickstart</h2>
+              <p class="plan-sub">10 days · Facebook and Instagram</p>
+              <div class="price-block">
+                <span class="from-lab">Starting From</span>
+                <div class="was-row"><span>Was</span><span class="price-orig" data-usd="249">$249</span><span class="was-save">SAVE 40%</span></div>
+                <div class="price-row"><span class="price" data-usd="149">$149</span><span class="per">one-time · 10 days</span></div>
+              </div>
+              <ul class="feat">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>7 custom infographic posts</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>3 AI generated reels, high quality</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>SEO captions and trendy hashtags</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Facebook and Instagram scheduling</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Profile audit and bio optimization</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Basic engagement, comment replies</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Story sets</span></li>
+              </ul>
+              <a class="btn btn-amber" href="index.html#audit">Start with Free Audit</a>
+            </article>
+
+            <!-- Growth -->
+            <article class="tier featured">
+              <div class="badges"><span class="badge badge-off">40% OFF</span><span class="badge badge-best">Best Value</span></div>
+              <h2>Growth — 15 Days Authority</h2>
+              <p class="plan-sub">15 days · Premium branding</p>
+              <div class="price-block">
+                <span class="from-lab">Starting From</span>
+                <div class="was-row"><span>Was</span><span class="price-orig" data-usd="417">$417</span><span class="was-save">SAVE 40%</span></div>
+                <div class="price-row"><span class="price" data-usd="250">$250</span><span class="per">one-time · 15 days</span></div>
+              </div>
+              <ul class="feat">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Everything in Starter</strong></span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>10 custom infographic posts</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>5 AI generated reels, pro editing</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>5 story sets, engagement driven</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Competitor analysis and strategy</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Account setup and optimization</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Monthly content calendar</span></li>
+              </ul>
+              <a class="btn btn-amber" href="index.html#audit">Start with Free Audit</a>
+            </article>
+
+            <!-- Business Pro -->
+            <article class="tier">
+              <div class="badges"><span class="badge badge-off">40% OFF</span></div>
+              <h2>Business Pro — 30 Days Full Dominance</h2>
+              <p class="plan-sub">30 days · All platforms</p>
+              <div class="price-block">
+                <span class="from-lab">Starting From</span>
+                <div class="was-row"><span>Was</span><span class="price-orig" data-usd="817">$817</span><span class="was-save">SAVE 40%</span></div>
+                <div class="price-row"><span class="price" data-usd="490">$490</span><span class="per">one-time · 30 days</span></div>
+              </div>
+              <ul class="feat">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Everything in Growth</strong></span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>20 custom infographic posts</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>10 AI generated reels, UGC style</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Monthly content calendar and strategy</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>10 story sets — polls, Q&amp;A, updates</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Monthly performance analytics</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M20 6 9 17l-5-5"/></svg><span>Priority support and 24/7 monitoring</span></li>
+              </ul>
+              <a class="btn btn-amber" href="index.html#audit">Start with Free Audit</a>
+            </article>
+          </div>
+
+          <p class="honesty">No lock-in contracts — cancel anytime. Every price is a starting point, confirmed in your free audit once we know your platforms and goals.</p>
+        </div>
+      </section>
+
+      <section class="included">
+        <div class="wrap">
+          <h2>Every plan <span class="amber">includes</span></h2>
+          <div class="inc-grid">
+            <div class="inc">
+              <h3>Onboarding call</h3>
+              <p>A kickoff call before anything is posted, so your goals, brand voice and approvals are clear from day one.</p>
+            </div>
+            <div class="inc">
+              <h3>Weekly reports</h3>
+              <p>A short weekly summary of what went out, what it earned and what is coming next. No vanity dashboards.</p>
+            </div>
+            <div class="inc">
+              <h3>Content built on buyer problems</h3>
+              <p>Every post follows the same structure — problem, solution, proof, call to action — so organic social warms up the audiences your ads convert.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="wrap">
+        <div class="foot-in">
+          <p>© 2026 Digitreams. All rights reserved.</p>
+          <nav class="foot-links" aria-label="Legal">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="opt-out.html">Opt Out</a>
+          </nav>
+        </div>
+        <p class="foot-currency">Prices are shown in USD and auto-converted to your local currency. Converted prices are estimates.</p>
+      </div>
+    </footer>
+
+    <script>
+      /* ---------- Currency: fully automatic conversion (static indicative rates, Oct 2026 snapshot) ---------- */
+      (function(){
+        var RATES = { USD:1, GBP:0.79, EUR:0.92, AED:3.67, SAR:3.75, QAR:3.64, KWD:0.31, PKR:278 };
+        var REGION2CUR = { US:"USD", GB:"GBP", UK:"GBP", AE:"AED", SA:"SAR", QA:"QAR", KW:"KWD", PK:"PKR", DE:"EUR", FR:"EUR", ES:"EUR", NL:"EUR", PT:"EUR", IE:"EUR", IT:"EUR", BH:"USD", OM:"USD", EG:"USD" };
+        function fmt(usd, cur){
+          try { return new Intl.NumberFormat(undefined, { style:"currency", currency:cur, maximumFractionDigits: 0 }).format(usd * RATES[cur]); }
+          catch(e){ return cur + " " + Math.round(usd * RATES[cur]).toLocaleString("en-US"); }
+        }
+        function apply(cur){
+          document.querySelectorAll(".price[data-usd]").forEach(function(el){ el.textContent = fmt(parseFloat(el.getAttribute("data-usd")), cur); });
+          document.querySelectorAll(".price-orig[data-usd]").forEach(function(el){ el.textContent = fmt(parseFloat(el.getAttribute("data-usd")), cur); });
+        }
+        var detected = "USD";
+        try {
+          var loc = (navigator.language || "en-US");
+          var region = (loc.split("-")[1] || "").toUpperCase();
+          if (REGION2CUR[region]) detected = REGION2CUR[region];
+        } catch(e){}
+        apply(detected);
+      })();
+    </script>
+  </body>
+</html>

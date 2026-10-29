@@ -1,0 +1,395 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="description" content="Google Ads Management pricing from Digitreams. Starting from $349 per month, 40% off the standard rate. Search, Display, YouTube and Shopping campaigns, with a free audit before you commit." />
+    <link rel="icon" href="data:," />
+    <title>Digitreams — Google Ads Pricing</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      :root{
+        color-scheme: dark;
+        --bg:#060607;
+        --bg-2:#0b0b0d;
+        --panel:#101013;
+        --panel-2:#16161a;
+        --line:rgba(255,255,255,.09);
+        --line-strong:rgba(255,255,255,.22);
+        --line-amber:rgba(255,184,0,.30);
+        --amber:#ffb800;
+        --amber-soft:#ffcf4d;
+        --amber-dim:rgba(255,184,0,.08);
+        --red:#ff4d4d;
+        --text:#f4f2ec;
+        --muted:#b6b3a8;
+        --muted-2:#8b887e;
+        --ink-on-amber:#0b0a06;
+        --radius:18px;
+        --maxw:1080px;
+      }
+      *{box-sizing:border-box}
+      html{scroll-behavior:smooth}
+      html,body{background:var(--bg)}
+      body{
+        margin:0;color:var(--text);
+        font-family:"Manrope",system-ui,-apple-system,"Segoe UI",sans-serif;
+        font-size:17px;line-height:1.65;
+        overflow-x:hidden;-webkit-font-smoothing:antialiased;
+        text-rendering:optimizeLegibility;
+      }
+      ::selection{background:var(--amber);color:var(--ink-on-amber)}
+      h1,h2,h3{font-family:"Sora",sans-serif;line-height:1.1;margin:0;letter-spacing:-.01em}
+      p{margin:0}
+      a{color:inherit}
+      .mono{font-family:"IBM Plex Mono",ui-monospace,monospace}
+      a:focus-visible, button:focus-visible{outline:2px solid var(--amber);outline-offset:3px;border-radius:6px}
+
+      .glow{
+        position:fixed;inset:0;z-index:0;pointer-events:none;
+        background:
+          radial-gradient(55% 40% at 80% 12%, rgba(255,184,0,.13), transparent 65%),
+          radial-gradient(40% 30% at 8% 85%, rgba(255,184,0,.06), transparent 60%),
+          var(--bg);
+      }
+      main, footer.site, header.nav{position:relative;z-index:2}
+
+      /* ---------- Header ---------- */
+      header.nav{
+        position:sticky;top:0;z-index:60;
+        background:rgba(6,6,7,.88);
+        backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+        border-bottom:1px solid var(--line);
+      }
+      .nav-inner{
+        max-width:var(--maxw);margin:0 auto;padding:16px 28px;
+        display:flex;align-items:center;justify-content:space-between;gap:20px;
+      }
+      .wordmark{
+        font-family:"Sora",sans-serif;font-weight:800;font-size:19px;
+        letter-spacing:.14em;text-decoration:none;white-space:nowrap;
+      }
+      .wordmark i{font-style:normal;color:var(--amber)}
+      .nav-links{display:flex;gap:12px;align-items:center;flex-wrap:wrap;justify-content:flex-end}
+      .nav-links a{
+        text-decoration:none;font-size:14.5px;font-weight:600;color:var(--muted);
+        padding:10px 16px;border:1px solid var(--line);border-radius:999px;
+        transition:color .15s ease,border-color .15s ease;
+        min-height:44px;display:inline-flex;align-items:center;white-space:nowrap;
+      }
+      .nav-links a:hover{color:var(--text);border-color:#3a3a3a}
+
+      .btn{
+        display:inline-flex;align-items:center;justify-content:center;gap:10px;
+        font-family:"Sora",sans-serif;font-weight:700;font-size:15.5px;
+        text-decoration:none;border-radius:999px;cursor:pointer;
+        padding:15px 30px;border:1px solid transparent;background:none;color:var(--text);
+        transition:transform .2s ease,background .2s ease,color .2s ease,border-color .2s ease;
+        min-height:52px;
+      }
+      .btn:active{transform:scale(.97)}
+      .btn-amber{background:var(--amber);color:var(--ink-on-amber)}
+      .btn-amber:hover{background:var(--amber-soft)}
+
+      /* ---------- Layout ---------- */
+      .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+      main{padding:64px 0 8px}
+      .content{max-width:820px}
+
+      .kicker{
+        display:inline-flex;align-items:center;gap:10px;
+        font-size:12px;font-weight:700;letter-spacing:.22em;text-transform:uppercase;
+        color:var(--amber);margin:0 0 20px;
+      }
+      .kicker::before{content:"";width:28px;height:1px;background:var(--amber)}
+      h1{
+        font-size:clamp(38px,6.5vw,56px);font-weight:800;letter-spacing:-.02em;
+        margin:0 0 14px;
+      }
+      h1 .amber{color:var(--amber)}
+      .lede{
+        font-size:19px;line-height:1.65;color:#d9d6cd;margin:0 0 40px;max-width:60ch;
+      }
+
+      /* ---------- Pricing panel ---------- */
+      .price-panel{
+        position:relative;
+        background:linear-gradient(180deg,var(--panel-2),var(--panel));
+        border:1px solid var(--line-amber);
+        border-radius:var(--radius);
+        padding:36px 36px 32px;
+        overflow:hidden;
+      }
+      .price-panel::before{
+        content:"";position:absolute;inset:0 0 auto 0;height:3px;
+        background:linear-gradient(90deg,var(--amber),rgba(255,184,0,0));
+      }
+      .pp-top{
+        display:flex;align-items:center;justify-content:space-between;gap:14px;
+        flex-wrap:wrap;margin-bottom:22px;
+      }
+      .pp-service{
+        font-family:"IBM Plex Mono",ui-monospace,monospace;
+        font-size:12.5px;font-weight:600;letter-spacing:.16em;text-transform:uppercase;
+        color:var(--muted);
+      }
+      .badge-off{
+        background:var(--red);color:#fff;
+        font-family:"Sora",sans-serif;font-weight:800;font-size:13px;letter-spacing:.08em;
+        padding:6px 12px;border-radius:8px;white-space:nowrap;
+      }
+      .pp-from{
+        display:block;
+        font-size:13px;font-weight:700;letter-spacing:.2em;text-transform:uppercase;
+        color:var(--muted);margin-bottom:8px;
+      }
+      .pp-was-row{
+        display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:2px;
+      }
+      .pp-was-lab{
+        font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-2);
+      }
+      .price-orig{
+        font-family:"Sora",sans-serif;font-weight:700;
+        font-size:clamp(18px,3vw,22px);color:var(--muted-2);
+        text-decoration:line-through;text-decoration-thickness:2px;
+      }
+      .pp-save{
+        font-family:"IBM Plex Mono",ui-monospace,monospace;
+        font-size:11.5px;font-weight:600;letter-spacing:.1em;color:var(--red);
+        border:1px solid rgba(255,77,77,.45);border-radius:999px;padding:3px 9px;
+      }
+      .pp-price-row{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap}
+      .price{
+        font-family:"Sora",sans-serif;font-weight:800;letter-spacing:-.02em;
+        font-size:clamp(44px,7.5vw,64px);line-height:1;color:var(--text);
+        font-variant-numeric:tabular-nums;
+      }
+      .per{font-size:17px;font-weight:600;color:var(--muted)}
+      .badge-retainer{
+        font-family:"IBM Plex Mono",ui-monospace,monospace;
+        font-size:11.5px;font-weight:600;letter-spacing:.12em;text-transform:uppercase;
+        color:var(--amber);
+        border:1px solid var(--line-amber);
+        background:var(--amber-dim);
+        border-radius:999px;padding:4px 10px;
+        align-self:center;white-space:nowrap;
+      }
+      .pp-spend{
+        margin-top:16px;font-size:15px;color:var(--muted);max-width:52ch;
+      }
+
+      /* ---------- Included ---------- */
+      .included{margin-top:48px}
+      h2{
+        font-size:clamp(24px,4vw,30px);font-weight:700;letter-spacing:-.01em;
+        margin:0 0 20px;
+      }
+      h2 .amber{color:var(--amber)}
+      ul.inc{margin:0;padding:0;list-style:none;display:grid;gap:4px}
+      ul.inc li{
+        display:flex;gap:14px;align-items:flex-start;
+        padding:13px 4px;border-bottom:1px solid var(--line);
+        font-size:16.5px;color:#d9d6cd;
+      }
+      ul.inc li:last-child{border-bottom:0}
+      ul.inc svg{flex:none;width:20px;height:20px;margin-top:3px;color:var(--amber)}
+      ul.inc li strong{color:var(--text);font-weight:700}
+
+      /* ---------- Honest note ---------- */
+      .note-box{
+        margin-top:40px;padding:22px 24px;
+        background:var(--amber-dim);border:1px solid rgba(255,184,0,.28);
+        border-radius:var(--radius);
+      }
+      .note-box p{margin:0;font-size:16.5px;line-height:1.65;color:var(--text)}
+      .note-box p strong{font-weight:800}
+
+      /* ---------- Bundle strip ---------- */
+      .bundle-strip{
+        margin-top:28px;
+        display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+        padding:20px 24px;
+        background:var(--bg-2);border:1px solid var(--line);border-radius:var(--radius);
+        text-decoration:none;
+        transition:border-color .15s ease;
+      }
+      .bundle-strip:hover{border-color:var(--line-amber)}
+      .bundle-strip .bs-text{font-size:16.5px;color:#d9d6cd}
+      .bundle-strip .bs-text strong{color:var(--text);font-weight:700}
+      .bundle-strip .bs-link{
+        font-family:"Sora",sans-serif;font-weight:700;font-size:15px;color:var(--amber);
+        display:inline-flex;align-items:center;gap:8px;white-space:nowrap;
+      }
+
+      /* ---------- CTA ---------- */
+      .cta-row{margin-top:36px;display:flex;flex-direction:column;gap:14px;align-items:flex-start}
+      .cta-note{font-size:14.5px;color:var(--muted-2)}
+
+      /* ---------- Footer ---------- */
+      footer.site{
+        margin-top:64px;border-top:1px solid var(--line);
+        background:var(--bg-2);
+      }
+      .footer-inner{
+        max-width:var(--maxw);margin:0 auto;padding:26px 28px;
+        display:flex;flex-wrap:wrap;gap:10px 24px;align-items:center;justify-content:space-between;
+      }
+      .footer-inner p{margin:0;font-size:14px;color:var(--muted-2)}
+      .footer-links{display:flex;gap:22px;flex-wrap:wrap}
+      .footer-links a{
+        font-size:14px;font-weight:600;color:var(--muted);text-decoration:none;
+        min-height:44px;display:inline-flex;align-items:center;
+      }
+      .footer-links a:hover{color:var(--amber)}
+      .foot-currency{
+        max-width:var(--maxw);margin:0 auto;padding:0 28px 26px;
+        font-size:12.5px;color:var(--muted-2);
+      }
+
+      @media (max-width:640px){
+        body{font-size:16.5px}
+        .nav-inner{padding:14px 18px}
+        .wordmark{font-size:17px}
+        .nav-links{gap:8px}
+        .nav-links a{padding:9px 13px;font-size:13.5px}
+        .wrap{padding:0 18px}
+        main{padding:44px 0 4px}
+        .lede{font-size:17.5px;margin-bottom:32px}
+        .price-panel{padding:28px 22px 26px}
+        .cta-row .btn{width:100%}
+        .footer-inner{padding:22px 18px}
+        .foot-currency{padding:0 18px 22px}
+      }
+      @media (prefers-reduced-motion:reduce){
+        html{scroll-behavior:auto}
+        .btn{transition:none}
+      }
+    </style>
+  </head>
+  <body>
+    <div class="glow" aria-hidden="true"></div>
+
+    <header class="nav">
+      <div class="nav-inner">
+        <a class="wordmark" href="index.html">DIGI<span style="color:var(--amber)">TREAMS</span><i>.</i></a>
+        <nav class="nav-links" aria-label="Page">
+          <a href="index.html#pricing">All pricing</a>
+          <a href="index.html">Back to home</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <div class="wrap">
+        <div class="content">
+          <p class="kicker">Pricing</p>
+          <h1>Google Ads <span class="amber">Management</span></h1>
+          <p class="lede">Search, Display, YouTube and Shopping campaigns optimised for click-through rate, Quality Score and conversions.</p>
+
+          <section class="price-panel" aria-label="Google Ads Management price">
+            <div class="pp-top">
+              <span class="pp-service">Google Ads</span>
+              <span class="badge-off">40% OFF</span>
+            </div>
+            <span class="pp-from">Starting From</span>
+            <div class="pp-was-row">
+              <span class="pp-was-lab">Was</span>
+              <span class="price-orig" data-usd="582">$582</span>
+              <span class="pp-save">SAVE 40%</span>
+            </div>
+            <div class="pp-price-row">
+              <span class="price" data-usd="349">$349</span>
+              <span class="per">per month</span>
+              <span class="badge-retainer">Monthly Retainer</span>
+            </div>
+            <p class="pp-spend">Ad spend is not included — you pay Google directly.</p>
+          </section>
+
+          <section class="included" aria-labelledby="included-h">
+            <h2 id="included-h">What is <span class="amber">included</span></h2>
+            <ul class="inc">
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <span><strong>Search campaign build and structure</strong> — tight ad groups built around buyer intent, not a scatter of keywords.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <span><strong>Keyword and search-intent research</strong> — the terms your buyers actually type, mapped to the offer they should land on.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <span><strong>Conversion tracking setup check</strong> — calls, forms and sales verified as conversions before budget is spent.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <span><strong>Ad copy and assets</strong> — headlines, descriptions and extensions written to match each search, not copied across campaigns.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <span><strong>Weekly performance reports</strong> — spend, conversions and cost per result in plain language, every week.</span>
+              </li>
+              <li>
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg>
+                <span><strong>Onboarding call</strong> — your goals, your market and your account history, agreed before anything goes live.</span>
+              </li>
+            </ul>
+          </section>
+
+          <div class="note-box">
+            <p>Google Ads management has one honest starting price. Your final quote is confirmed on the free audit call, based on your goals and account history. No hidden fees. No lock-in contract.</p>
+          </div>
+
+          <a class="bundle-strip" href="pricing-bundles.html">
+            <span class="bs-text">Want creative and management together? <strong>Bundle them and save more.</strong></span>
+            <span class="bs-link">See the bundle packages →</span>
+          </a>
+
+          <div class="cta-row">
+            <a class="btn btn-amber" href="index.html#audit">Start with Free Audit →</a>
+            <p class="cta-note">The audit comes first. We diagnose your account before you pay anything.</p>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site">
+      <div class="footer-inner">
+        <p>© 2026 Digitreams. All rights reserved.</p>
+        <nav class="footer-links" aria-label="Footer">
+          <a href="privacy-policy.html">Privacy Policy</a>
+          <a href="opt-out.html">Opt Out</a>
+        </nav>
+      </div>
+      <p class="foot-currency">Prices are shown in USD and auto-converted to your local currency. Converted prices are estimates.</p>
+    </footer>
+
+    <script>
+      (function(){
+        "use strict";
+        /* Currency — fully automatic conversion, same as the main site.
+           Static indicative rates, October 2026 snapshot. No selector. */
+        var RATES = { USD:1, GBP:0.79, EUR:0.92, AED:3.67, SAR:3.75, QAR:3.64, KWD:0.31, PKR:278 };
+        var REGION2CUR = { US:"USD", GB:"GBP", UK:"GBP", AE:"AED", SA:"SAR", QA:"QAR", KW:"KWD", PK:"PKR", DE:"EUR", FR:"EUR", ES:"EUR", NL:"EUR", PT:"EUR", IE:"EUR", IT:"EUR", BH:"USD", OM:"USD", EG:"USD" };
+        function fmt(usd, cur){
+          try { return new Intl.NumberFormat(undefined, { style:"currency", currency:cur, maximumFractionDigits: 0 }).format(usd * RATES[cur]); }
+          catch(e){ return cur + " " + Math.round(usd * RATES[cur]).toLocaleString("en-US"); }
+        }
+        function apply(cur){
+          document.querySelectorAll(".price[data-usd]").forEach(function(el){ el.textContent = fmt(parseFloat(el.getAttribute("data-usd")), cur); });
+          document.querySelectorAll(".price-orig[data-usd]").forEach(function(el){ el.textContent = fmt(parseFloat(el.getAttribute("data-usd")), cur); });
+        }
+        var detected = "USD";
+        try {
+          var loc = (navigator.language || "en-US");
+          var region = (loc.split("-")[1] || "").toUpperCase();
+          if (REGION2CUR[region]) detected = REGION2CUR[region];
+        } catch(e){}
+        apply(detected);
+      })();
+    </script>
+  </body>
+</html>

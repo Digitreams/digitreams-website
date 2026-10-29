@@ -1,0 +1,401 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="description" content="Meta Ads Management pricing at Digitreams — one honest starting price from $349 per month, 40% off today. Full-funnel campaigns, custom audiences, retargeting stacks and creative testing built for scale." />
+    <link rel="icon" href="data:," />
+    <title>Meta Ads Management Pricing — Digitreams</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      :root{
+        --bg:#060607;
+        --bg-2:#0b0b0d;
+        --panel:#101013;
+        --panel-2:#16161a;
+        --line:rgba(255,255,255,.09);
+        --line-strong:rgba(255,255,255,.22);
+        --line-amber:rgba(255,184,0,.30);
+        --amber:#ffb800;
+        --amber-soft:#ffcf4d;
+        --amber-dim:rgba(255,184,0,.08);
+        --text:#f4f2ec;
+        --muted:#b6b3a8;
+        --muted-2:#8b887e;
+        --ink-on-amber:#0b0a06;
+        --radius:18px;
+        --maxw:1240px;
+      }
+      *{box-sizing:border-box}
+      html{scroll-behavior:smooth;scroll-padding-top:88px}
+      html,body{background:var(--bg)}
+      body{
+        margin:0;color:var(--text);
+        font-family:"Manrope",system-ui,sans-serif;
+        font-size:17px;line-height:1.65;
+        overflow-x:hidden;-webkit-font-smoothing:antialiased;
+      }
+      ::selection{background:var(--amber);color:var(--ink-on-amber)}
+      h1,h2,h3{font-family:"Sora",sans-serif;line-height:1.08;margin:0;letter-spacing:-.01em}
+      p{margin:0}
+      a{color:inherit}
+      button{font-family:inherit}
+
+      /* ---------- Ambient background (matches the main site fallback) ---------- */
+      .bg-glow{
+        position:fixed;inset:0;z-index:0;pointer-events:none;
+        background:
+          radial-gradient(60% 45% at 78% 12%, rgba(255,184,0,.13), transparent 65%),
+          radial-gradient(45% 35% at 8% 85%, rgba(255,184,0,.06), transparent 60%),
+          var(--bg);
+      }
+      .grain{
+        position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.05;
+        background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='140' height='140'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2'/%3E%3C/filter%3E%3Crect width='140' height='140' filter='url(%23n)' opacity='0.55'/%3E%3C/svg%3E");
+      }
+      main,footer.site,header.nav{position:relative;z-index:2}
+
+      /* ---------- Nav ---------- */
+      header.nav{
+        position:fixed;top:0;left:0;right:0;z-index:60;
+        transition:background .35s ease,border-color .35s ease;
+        border-bottom:1px solid transparent;
+      }
+      header.nav.scrolled{background:rgba(6,6,7,.85);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom-color:var(--line)}
+      .nav-inner{max-width:var(--maxw);margin:0 auto;padding:16px 28px;display:flex;align-items:center;justify-content:space-between;gap:16px}
+      .wordmark{font-family:"Sora",sans-serif;font-weight:800;font-size:19px;letter-spacing:.14em;text-decoration:none;white-space:nowrap}
+      .wordmark span{color:var(--amber)}
+      .wordmark i{font-style:normal;color:var(--amber)}
+      .nav-links{display:flex;gap:26px;align-items:center}
+      .nav-links a{text-decoration:none;font-size:14.5px;font-weight:600;color:var(--muted);transition:color .2s;min-height:48px;display:inline-flex;align-items:center}
+      .nav-links a:hover{color:var(--text)}
+      .btn{
+        display:inline-flex;align-items:center;gap:10px;
+        font-family:"Sora",sans-serif;font-weight:700;font-size:15px;
+        text-decoration:none;border-radius:999px;cursor:pointer;
+        padding:14px 26px;border:1px solid transparent;background:none;color:var(--text);
+        transition:transform .2s ease,background .2s ease,color .2s ease,border-color .2s ease;
+      }
+      .btn:active{transform:scale(.97)}
+      .btn-amber{background:var(--amber);color:var(--ink-on-amber)}
+      .btn-amber:hover{background:var(--amber-soft)}
+      .btn-ghost{background:transparent;color:var(--text);border-color:rgba(255,255,255,.24)}
+      .btn-ghost:hover{border-color:var(--amber);color:var(--amber)}
+      .btn-small{padding:10px 20px;font-size:14px;min-height:48px}
+      .nav-links a.btn-ghost{color:var(--text)}
+      @media (max-width:560px){
+        .nav-inner{padding:12px 18px}
+        .wordmark{font-size:16.5px}
+        .nav-links{gap:16px}
+        .nav-links a{font-size:13.5px}
+        .nav-links a.btn-ghost{padding:8px 14px;font-size:13px}
+      }
+
+      /* ---------- Layout ---------- */
+      .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+      @media (max-width:600px){.wrap{padding:0 20px}}
+      .sec-tag{
+        font-family:"IBM Plex Mono",monospace;font-size:12.5px;letter-spacing:.22em;
+        color:var(--amber);text-transform:uppercase;margin-bottom:18px;
+        display:flex;align-items:center;gap:12px;
+      }
+      .sec-tag::before{content:"";width:34px;height:1px;background:var(--amber)}
+
+      /* ---------- Page head ---------- */
+      .page-head{padding:158px 0 10px;text-align:center}
+      .page-head .sec-tag{justify-content:center}
+      .page-head .sec-tag::after{content:"";width:34px;height:1px;background:var(--amber)}
+      .page-head h1{font-size:clamp(2.3rem,6vw,3.6rem);font-weight:800}
+      .page-head h1 .amber{color:var(--amber)}
+      .page-head .intro{color:var(--muted);margin:20px auto 0;font-size:18.5px;max-width:620px}
+      @media (max-width:600px){.page-head{padding-top:128px}}
+
+      /* ---------- Pricing panel ---------- */
+      .panel-zone{padding:44px 0 8px}
+      .price-panel{
+        max-width:640px;margin:0 auto;position:relative;overflow:hidden;
+        background:linear-gradient(165deg,var(--panel-2),var(--panel));
+        border:1px solid var(--amber);border-radius:24px;
+        padding:34px 38px 32px;
+        box-shadow:0 30px 60px rgba(0,0,0,.55),0 0 0 1px var(--line-amber),0 18px 44px rgba(255,184,0,.10);
+      }
+      .price-panel::before{
+        content:"";position:absolute;inset:0;pointer-events:none;
+        background:radial-gradient(75% 42% at 85% 0%,rgba(255,184,0,.10),transparent 65%);
+      }
+      @media (max-width:600px){.price-panel{padding:26px 22px 24px}}
+      .pp-top{display:flex;align-items:center;justify-content:space-between;gap:12px;position:relative}
+      .pp-tag{font-family:"IBM Plex Mono",monospace;font-size:12px;font-weight:600;letter-spacing:.2em;color:var(--amber);display:inline-flex;align-items:center;gap:9px}
+      .pp-tag::before{content:"";width:9px;height:9px;background:var(--amber);flex:none}
+      .pp-badges{display:flex;flex-wrap:wrap;gap:8px;margin-top:14px;position:relative}
+      .pp-badge{
+        display:inline-flex;align-self:flex-start;position:relative;
+        background:var(--amber);color:var(--ink-on-amber);
+        font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:600;letter-spacing:.14em;
+        padding:5px 11px;border-radius:999px;
+      }
+      .pp-badge.pp-off{background:#ff4b33;color:#fff}
+      .pp-price-block{margin-top:26px;position:relative}
+      .pp-from{font-family:"IBM Plex Mono",monospace;font-size:11.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-2)}
+      .pp-was-row{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px;margin-top:8px}
+      .pp-was-lab{font-family:"IBM Plex Mono",monospace;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-2)}
+      .pp-was-row .price-orig{font-family:"Sora",sans-serif;font-size:21px;font-weight:700;line-height:1;color:var(--muted-2);text-decoration:line-through;text-decoration-color:#ff4b33;text-decoration-thickness:2px}
+      .pp-was-save{font-family:"IBM Plex Mono",monospace;font-size:11px;font-weight:600;letter-spacing:.1em;color:#ff7a66}
+      .pp-price-row{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 12px;margin-top:6px}
+      .pp-price-row .price{font-family:"Sora",sans-serif;font-size:clamp(44px,11vw,64px);font-weight:800;line-height:1.02;color:var(--amber);letter-spacing:-.02em}
+      .pp-price-row .per{font-size:16.5px;font-weight:700;color:var(--muted)}
+      .pp-note{margin-top:12px;font-size:14.5px;color:var(--muted-2);position:relative}
+      .pp-divider{border:none;border-top:1px dashed var(--line-strong);margin:28px 0 24px;position:relative}
+      .pp-included h2{font-size:19px;font-weight:700;position:relative}
+      .inc-list{list-style:none;margin:18px 0 0;padding:0;display:grid;gap:13px;position:relative}
+      .inc-list li{display:flex;gap:12px;align-items:flex-start;font-size:16px;color:var(--muted)}
+      .inc-list li strong{color:var(--text);font-weight:700}
+      .inc-list svg{width:20px;height:20px;flex:none;color:var(--amber);margin-top:3px}
+      .pp-cta{margin-top:28px;justify-content:center;min-height:54px;width:100%;position:relative;font-size:16px}
+      .pp-terms{margin-top:14px;font-size:13.5px;color:var(--muted-2);text-align:center;position:relative}
+
+      /* ---------- Honest note ---------- */
+      .note-zone{padding:26px 0 4px}
+      .honest-note{
+        max-width:640px;margin:0 auto;
+        background:var(--panel);border:1px dashed var(--line-amber);border-radius:16px;
+        padding:22px 26px;font-size:15.5px;color:var(--muted);line-height:1.65;
+      }
+      .honest-note strong{color:var(--amber-soft)}
+
+      /* ---------- Bundle strip ---------- */
+      .strip-zone{padding:22px 0 4px}
+      .bundle-strip{
+        display:flex;align-items:center;justify-content:space-between;gap:14px;
+        max-width:640px;margin:0 auto;min-height:58px;
+        background:var(--panel);border:1px solid var(--line-strong);border-radius:14px;
+        padding:16px 22px;text-decoration:none;font-size:15.5px;color:var(--muted);
+        transition:border-color .2s ease;
+      }
+      .bundle-strip strong{color:var(--text)}
+      .bundle-strip:hover{border-color:var(--amber)}
+      .bundle-strip .bs-arrow{color:var(--amber);font-family:"Sora",sans-serif;font-weight:700;font-size:14.5px;white-space:nowrap}
+      @media (max-width:560px){.bundle-strip{flex-direction:column;align-items:flex-start;gap:6px}}
+
+      /* ---------- Related packages ---------- */
+      .related{padding:74px 0 90px}
+      .related-head{max-width:640px;margin:0 auto 30px;text-align:center}
+      .related-head .sec-tag{justify-content:center}
+      .related-head .sec-tag::after{content:"";width:34px;height:1px;background:var(--amber)}
+      .related-head h2{font-size:clamp(1.55rem,3.6vw,2.1rem);font-weight:800}
+      .related-head p{color:var(--muted);margin-top:12px;font-size:16.5px}
+      .rel-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;max-width:980px;margin:0 auto}
+      @media (max-width:860px){.rel-grid{grid-template-columns:1fr;max-width:640px}}
+      .rel-card{
+        display:flex;flex-direction:column;text-decoration:none;
+        background:linear-gradient(165deg,var(--panel-2),var(--panel));
+        border:1px solid var(--line-strong);border-radius:20px;
+        padding:24px 24px 22px;position:relative;overflow:hidden;
+        transition:border-color .25s ease,transform .25s ease;
+      }
+      .rel-card::before{
+        content:"";position:absolute;inset:0;pointer-events:none;
+        background:radial-gradient(75% 42% at 85% 0%,rgba(255,184,0,.08),transparent 65%);
+      }
+      .rel-card:hover{border-color:var(--amber);transform:translateY(-3px)}
+      .rel-card:focus-visible{outline:2px solid var(--amber);outline-offset:3px}
+      .rel-tag{font-family:"IBM Plex Mono",monospace;font-size:11.5px;font-weight:600;letter-spacing:.2em;color:var(--amber);display:inline-flex;align-items:center;gap:9px;position:relative}
+      .rel-tag::before{content:"";width:8px;height:8px;background:var(--amber);flex:none}
+      .rel-card h3{font-size:21px;font-weight:800;margin-top:12px;position:relative}
+      .rel-line{color:var(--muted);font-size:15px;margin-top:8px;position:relative}
+      .rel-price{margin-top:auto;padding-top:20px;position:relative}
+      .rel-from{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--muted-2);display:block}
+      .rel-was{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 7px;margin-top:5px}
+      .rel-was .price-orig{font-family:"Sora",sans-serif;font-size:16px;font-weight:700;line-height:1;color:var(--muted-2);text-decoration:line-through;text-decoration-color:#ff4b33;text-decoration-thickness:2px}
+      .rel-save{font-family:"IBM Plex Mono",monospace;font-size:10.5px;font-weight:600;letter-spacing:.1em;color:#ff7a66}
+      .rel-now{display:flex;flex-wrap:wrap;align-items:baseline;gap:4px 8px;margin-top:3px}
+      .rel-now .price{font-family:"Sora",sans-serif;font-size:clamp(26px,6vw,32px);font-weight:800;line-height:1.05;color:var(--amber)}
+      .rel-now .per{font-size:13.5px;font-weight:700;color:var(--muted)}
+      .rel-link{margin-top:16px;font-family:"Sora",sans-serif;font-weight:700;font-size:14.5px;color:var(--amber);position:relative}
+
+      /* ---------- Footer ---------- */
+      footer.site{border-top:1px solid var(--line);background:rgba(6,6,7,.94);padding:40px 0 34px}
+      .foot-row{display:flex;align-items:center;justify-content:space-between;gap:14px 28px;flex-wrap:wrap}
+      .foot-row .copy{color:var(--muted-2);font-size:14px}
+      .foot-links{display:flex;gap:26px;flex-wrap:wrap}
+      .foot-links a{color:var(--muted);text-decoration:none;font-size:14.5px;font-weight:600;min-height:48px;display:inline-flex;align-items:center}
+      .foot-links a:hover{color:var(--amber)}
+      .foot-currency{margin-top:10px;font-size:12.5px;color:var(--muted-2)}
+
+      @media (prefers-reduced-motion: reduce){
+        html{scroll-behavior:auto}
+        .btn,.rel-card{transition:none}
+      }
+    </style>
+  </head>
+  <body>
+    <div class="bg-glow" aria-hidden="true"></div>
+    <div class="grain" aria-hidden="true"></div>
+
+    <header class="nav" id="topnav">
+      <div class="nav-inner">
+        <a class="wordmark" href="index.html">DIGI<span>TREAMS</span><i>.</i></a>
+        <nav class="nav-links" aria-label="Main">
+          <a href="index.html#pricing">All pricing</a>
+          <a href="index.html" class="btn btn-ghost btn-small">Back to home</a>
+        </nav>
+      </div>
+    </header>
+
+    <main>
+      <!-- PAGE HEAD -->
+      <section class="page-head">
+        <div class="wrap">
+          <div class="sec-tag rv">Pricing</div>
+          <h1 class="rv">Meta Ads <span class="amber">Management</span></h1>
+          <p class="intro rv">Full-funnel Meta campaigns with custom audiences, retargeting stacks and creative testing built for scale.</p>
+        </div>
+      </section>
+
+      <!-- PRICING PANEL -->
+      <section class="panel-zone">
+        <div class="wrap">
+          <article class="price-panel rv" aria-label="Meta Ads Management package">
+            <div class="pp-top"><span class="pp-tag">META ADS</span><span class="pp-badge pp-off">40% OFF</span></div>
+            <div class="pp-badges"><span class="pp-badge">CORE SERVICE</span></div>
+            <div class="pp-price-block">
+              <span class="pp-from">Starting From</span>
+              <div class="pp-was-row"><span class="pp-was-lab">Was</span><span class="price-orig" data-usd="582">$582</span><span class="pp-was-save">SAVE 40%</span></div>
+              <div class="pp-price-row"><span class="price" data-usd="349">$349</span><span class="per">per month</span></div>
+              <div class="pp-badges"><span class="pp-badge">MONTHLY RETAINER</span></div>
+              <p class="pp-note">Ad spend is not included — you pay Meta directly.</p>
+            </div>
+            <hr class="pp-divider" />
+            <div class="pp-included">
+              <h2>What is included</h2>
+              <ul class="inc-list">
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Full-funnel campaign structure</strong> — awareness to sale, built as one system.</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Custom audiences and retargeting stacks</strong> — the right message at every stage.</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Creative testing and iteration</strong> — winners scaled, losers cut early.</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Audience research and pixel setup check</strong> — tracking verified before spend starts.</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Weekly performance reports</strong> — plain numbers, no vanity metrics.</span></li>
+                <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M20 6 9 17l-5-5"/></svg><span><strong>Onboarding call</strong> — goals, access and launch plan agreed up front.</span></li>
+              </ul>
+            </div>
+            <a class="btn btn-amber pp-cta" href="index.html#audit">Start with Free Audit →</a>
+            <p class="pp-terms">Every engagement starts with the free audit — no payment details needed.</p>
+          </article>
+        </div>
+      </section>
+
+      <!-- HONEST NOTE -->
+      <section class="note-zone">
+        <div class="wrap">
+          <div class="honest-note rv">
+            Meta Ads management has one honest starting price. Your final quote is confirmed on the free audit call, based on your goals and account history. No hidden fees. No lock-in contract.
+          </div>
+        </div>
+      </section>
+
+      <!-- BUNDLE STRIP -->
+      <section class="strip-zone">
+        <div class="wrap">
+          <a class="bundle-strip rv" href="pricing-bundles.html">
+            <span><strong>Want creative and management together?</strong> Bundle packages pair ad management with AI creative.</span>
+            <span class="bs-arrow">See the bundle packages →</span>
+          </a>
+        </div>
+      </section>
+
+      <!-- RELATED PACKAGES -->
+      <section class="related">
+        <div class="wrap">
+          <div class="related-head rv">
+            <div class="sec-tag">Keep exploring</div>
+            <h2>Other services, <span style="color:var(--amber)">same honest pricing</span></h2>
+            <p>Every package starts with the free audit, and every price below is 40% off today.</p>
+          </div>
+          <div class="rel-grid">
+            <a class="rel-card rv" href="ai-ugc-pricing.html">
+              <span class="rel-tag">AI UGC VIDEO ADS</span>
+              <h3>AI UGC Video Ads</h3>
+              <p class="rel-line">Scroll-stopping AI video ads for your products — scripted, produced and ready to launch.</p>
+              <div class="rel-price">
+                <span class="rel-from">Starting From</span>
+                <div class="rel-was"><span class="price-orig" data-usd="248">$248</span><span class="rel-save">SAVE 40%</span></div>
+                <div class="rel-now"><span class="price" data-usd="149">$149</span><span class="per">one-time · 3 ads</span></div>
+              </div>
+              <span class="rel-link">See AI UGC pricing →</span>
+            </a>
+            <a class="rel-card rv" href="social-media-management-pricing.html">
+              <span class="rel-tag">SOCIAL MEDIA</span>
+              <h3>Social Media Management</h3>
+              <p class="rel-line">Your profiles planned, posted and managed — basic package with 10 days of content.</p>
+              <div class="rel-price">
+                <span class="rel-from">Starting From</span>
+                <div class="rel-was"><span class="price-orig" data-usd="249">$249</span><span class="rel-save">SAVE 40%</span></div>
+                <div class="rel-now"><span class="price" data-usd="149">$149</span><span class="per">/month</span></div>
+              </div>
+              <span class="rel-link">See social media pricing →</span>
+            </a>
+            <a class="rel-card rv" href="google-ads-pricing.html">
+              <span class="rel-tag">GOOGLE ADS</span>
+              <h3>Google Ads Management</h3>
+              <p class="rel-line">Search campaigns that catch buyers at the exact moment they are ready to act.</p>
+              <div class="rel-price">
+                <span class="rel-from">Starting From</span>
+                <div class="rel-was"><span class="price-orig" data-usd="582">$582</span><span class="rel-save">SAVE 40%</span></div>
+                <div class="rel-now"><span class="price" data-usd="349">$349</span><span class="per">/month</span></div>
+              </div>
+              <span class="rel-link">See Google Ads pricing →</span>
+            </a>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site">
+      <div class="wrap">
+        <div class="foot-row">
+          <span class="copy">© 2026 Digitreams. All rights reserved.</span>
+          <nav class="foot-links" aria-label="Footer">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="opt-out.html">Opt Out</a>
+          </nav>
+        </div>
+        <p class="foot-currency">Prices are shown in USD and auto-converted to your local currency. Converted prices are estimates.</p>
+      </div>
+    </footer>
+
+    <script>
+      (function(){
+        "use strict";
+        var reduced = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+
+        /* ---------- Nav scroll state ---------- */
+        var nav = document.getElementById("topnav");
+        function onNav(){ nav.classList.toggle("scrolled", window.scrollY > 30); }
+        window.addEventListener("scroll", onNav, {passive:true}); onNav();
+
+        /* ---------- Currency: fully automatic conversion (static indicative rates, Oct 2026 snapshot) ---------- */
+        (function(){
+          var RATES = { USD:1, GBP:0.79, EUR:0.92, AED:3.67, SAR:3.75, QAR:3.64, KWD:0.31, PKR:278 };
+          var REGION2CUR = { US:"USD", GB:"GBP", UK:"GBP", AE:"AED", SA:"SAR", QA:"QAR", KW:"KWD", PK:"PKR", DE:"EUR", FR:"EUR", ES:"EUR", NL:"EUR", PT:"EUR", IE:"EUR", IT:"EUR", BH:"USD", OM:"USD", EG:"USD" };
+          function fmt(usd, cur){
+            try { return new Intl.NumberFormat(undefined, { style:"currency", currency:cur, maximumFractionDigits: 0 }).format(usd * RATES[cur]); }
+            catch(e){ return cur + " " + Math.round(usd * RATES[cur]).toLocaleString("en-US"); }
+          }
+          function apply(cur){
+            document.querySelectorAll(".price[data-usd]").forEach(function(el){ el.textContent = fmt(parseFloat(el.getAttribute("data-usd")), cur); });
+            document.querySelectorAll(".price-orig[data-usd]").forEach(function(el){ el.textContent = fmt(parseFloat(el.getAttribute("data-usd")), cur); });
+          }
+          var detected = "USD";
+          try {
+            var loc = (navigator.language || "en-US");
+            var region = (loc.split("-")[1] || "").toUpperCase();
+            if (REGION2CUR[region]) detected = REGION2CUR[region];
+          } catch(e){}
+          apply(detected);
+        })();
+      })();
+    </script>
+  </body>
+</html>
