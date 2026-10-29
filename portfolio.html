@@ -1,0 +1,769 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <meta name="color-scheme" content="dark" />
+    <meta name="description" content="Digitreams portfolio — real campaigns, real numbers. Case results, industries served and verified client testimonials across Meta Ads, Google Ads, AI UGC, TikTok and social media." />
+    <link rel="icon" href="data:," />
+    <title>Digitreams — Portfolio</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Sora:wght@400;600;700;800&family=Manrope:wght@400;500;600;700;800&family=IBM+Plex+Mono:wght@400;500;600&display=swap" rel="stylesheet" />
+    <style>
+      :root{
+        --bg:#060607;
+        --bg-2:#0b0b0d;
+        --panel:#101013;
+        --panel-2:#16161a;
+        --line:rgba(255,255,255,.09);
+        --line-strong:rgba(255,255,255,.22);
+        --line-amber:rgba(255,184,0,.30);
+        --amber:#ffb800;
+        --amber-soft:#ffcf4d;
+        --amber-dim:rgba(255,184,0,.08);
+        --text:#f4f2ec;
+        --muted:#b6b3a8;
+        --muted-2:#8b887e;
+        --ink-on-amber:#0b0a06;
+        --radius:18px;
+        --maxw:1240px;
+      }
+      *{box-sizing:border-box}
+      html{scroll-behavior:smooth}
+      html,body{background:var(--bg)}
+      body{
+        margin:0;color:var(--text);
+        font-family:"Manrope",system-ui,sans-serif;
+        font-size:17px;line-height:1.65;
+        overflow-x:hidden;-webkit-font-smoothing:antialiased;
+      }
+      ::selection{background:var(--amber);color:var(--ink-on-amber)}
+      h1,h2,h3{font-family:"Sora",sans-serif;line-height:1.1;margin:0;letter-spacing:-.01em}
+      p{margin:0}
+      a{color:inherit}
+      .mono{font-family:"IBM Plex Mono",ui-monospace,monospace}
+      .wrap{max-width:var(--maxw);margin:0 auto;padding:0 28px}
+      .amber{color:var(--amber)}
+
+      /* ---------- Header ---------- */
+      header.nav{
+        position:fixed;top:0;left:0;right:0;z-index:60;
+        background:rgba(6,6,7,.85);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);
+        border-bottom:1px solid var(--line);
+      }
+      .nav-inner{max-width:var(--maxw);margin:0 auto;padding:16px 28px;display:flex;align-items:center;justify-content:space-between;gap:20px}
+      .wordmark{font-family:"Sora",sans-serif;font-weight:800;font-size:19px;letter-spacing:.14em;text-decoration:none}
+      .wordmark span{color:var(--amber)}
+      .wordmark i{font-style:normal;color:var(--amber)}
+      .back-link{
+        font-family:"Sora",sans-serif;font-weight:700;font-size:14.5px;text-decoration:none;
+        color:var(--muted);display:inline-flex;align-items:center;gap:8px;min-height:48px;
+        transition:color .2s;
+      }
+      .back-link:hover{color:var(--amber)}
+
+      main{padding-top:72px}
+
+      /* ---------- Buttons ---------- */
+      .btn{
+        display:inline-flex;align-items:center;gap:10px;
+        font-family:"Sora",sans-serif;font-weight:700;font-size:15px;
+        text-decoration:none;border-radius:999px;cursor:pointer;
+        padding:15px 28px;border:1px solid transparent;background:none;color:var(--text);
+        transition:transform .2s ease,background .2s ease,color .2s ease,border-color .2s ease;
+      }
+      .btn:active{transform:scale(.97)}
+      .btn-amber{background:var(--amber);color:var(--ink-on-amber)}
+      .btn-amber:hover{background:var(--amber-soft)}
+
+      /* ---------- Hero ---------- */
+      .hero{padding:72px 0 8px;position:relative}
+      .hero::before{
+        content:"";position:absolute;inset:0;pointer-events:none;
+        background:radial-gradient(55% 60% at 82% 10%, rgba(255,184,0,.12), transparent 65%);
+      }
+      .sec-tag{
+        display:inline-block;font-family:"IBM Plex Mono",ui-monospace,monospace;
+        font-size:12px;letter-spacing:.14em;text-transform:uppercase;color:var(--amber);
+        border:1px solid var(--line-amber);border-radius:999px;padding:6px 14px;margin-bottom:22px;
+        background:var(--amber-dim);
+      }
+      .hero h1{font-size:clamp(42px,6.4vw,72px);font-weight:800;max-width:760px}
+      .hero .lead{margin-top:20px;font-size:19px;color:var(--muted);max-width:640px}
+
+      /* ---------- Stats ---------- */
+      .stats-band{
+        margin-top:48px;display:grid;grid-template-columns:repeat(5,1fr);gap:14px;
+      }
+      .stat-card{
+        background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+        padding:24px 20px;
+      }
+      .stat-card .sv{font-family:"Sora",sans-serif;font-weight:800;font-size:36px;color:var(--amber);line-height:1}
+      .stat-card .sl{margin-top:10px;font-size:14.5px;font-weight:600;color:var(--muted);line-height:1.45}
+
+      /* ---------- Sections ---------- */
+      section{padding:76px 0 8px}
+      .sec-head{max-width:720px;margin-bottom:38px}
+      .sec-head h2{font-size:clamp(30px,4.4vw,46px);font-weight:800}
+      .sec-head p{margin-top:14px;color:var(--muted);font-size:17.5px}
+
+      /* ---------- Case results ---------- */
+      .case-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+      .case-card{
+        background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+        padding:30px 26px;position:relative;overflow:hidden;
+      }
+      .case-card::after{
+        content:"";position:absolute;top:0;left:0;right:0;height:2px;
+        background:linear-gradient(90deg,var(--amber),transparent 70%);opacity:.55;
+      }
+      .case-card .svc{
+        font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11.5px;
+        letter-spacing:.13em;text-transform:uppercase;color:var(--muted-2);
+      }
+      .case-card .cv{
+        font-family:"Sora",sans-serif;font-weight:800;font-size:52px;line-height:1.05;
+        color:var(--amber);margin:14px 0 8px;
+      }
+      .case-card .cl{font-size:15.5px;font-weight:600;color:var(--text);line-height:1.5}
+
+      /* ---------- Industries ---------- */
+      .ind-chips{display:flex;flex-wrap:wrap;gap:10px}
+      .ind-chips span{
+        border:1px solid var(--line-strong);border-radius:999px;padding:9px 18px;
+        font-size:14.5px;font-weight:600;color:var(--text);background:var(--panel);
+      }
+      .ind-chips span.more{color:var(--muted-2);border-color:var(--line);background:transparent}
+
+      /* ---------- Testimonials ---------- */
+      .rated-line{
+        display:flex;align-items:center;gap:12px;flex-wrap:wrap;
+        color:var(--muted);font-size:16px;font-weight:600;margin-bottom:26px;
+      }
+      .rated-line .stars{color:var(--amber);letter-spacing:3px;font-size:17px}
+      .testi-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+      .testi{
+        background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+        padding:28px 26px;display:flex;flex-direction:column;gap:14px;
+      }
+      .testi .stars{color:var(--amber);letter-spacing:3px;font-size:15px}
+      .testi blockquote{margin:0;font-size:16.5px;line-height:1.6;color:var(--text);flex:1}
+      .testi .who{font-family:"Sora",sans-serif;font-weight:700;font-size:15.5px}
+      .testi .role{font-size:14px;color:var(--muted);margin-top:2px;line-height:1.5}
+      .testi .ind{
+        align-self:flex-start;font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;
+        letter-spacing:.12em;text-transform:uppercase;color:var(--amber);
+        border:1px solid var(--line-amber);border-radius:999px;padding:4px 11px;background:var(--amber-dim);
+      }
+
+      /* ---------- Video filters + grid ---------- */
+      .filter-chips{display:flex;flex-wrap:wrap;gap:9px;margin-bottom:30px}
+      .filter-chips button{
+        font-family:"Manrope",sans-serif;font-size:14px;font-weight:700;color:var(--muted);
+        background:var(--panel);border:1px solid var(--line-strong);border-radius:999px;
+        padding:10px 18px;cursor:pointer;min-height:44px;
+        transition:background .2s ease,color .2s ease,border-color .2s ease;
+      }
+      .filter-chips button:hover{color:var(--text);border-color:var(--amber)}
+      .filter-chips button.active{background:var(--amber);color:var(--ink-on-amber);border-color:var(--amber)}
+      .vid-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+      .vid-card{
+        background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+        overflow:hidden;display:flex;flex-direction:column;
+      }
+      .vid-card[hidden]{display:none}
+      .vid-frame{position:relative;aspect-ratio:9/16;background:#000}
+      .vid-frame iframe{position:absolute;inset:0;width:100%;height:100%;border:0;display:block}
+      .vid-play{position:absolute;inset:0;width:100%;height:100%;padding:0;border:0;background:#000;cursor:pointer;display:block}
+      .vid-play img{width:100%;height:100%;object-fit:cover;display:block;opacity:.92}
+      .vid-play::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 55%,rgba(0,0,0,.45));pointer-events:none}
+      .vid-play .play-ic{
+        position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);z-index:1;
+        width:62px;height:62px;border-radius:50%;background:var(--amber);color:var(--ink-on-amber);
+        display:flex;align-items:center;justify-content:center;
+        box-shadow:0 8px 28px rgba(0,0,0,.5);
+        transition:transform .2s ease,background .2s ease;
+      }
+      .vid-play:hover .play-ic,.vid-play:focus-visible .play-ic{transform:translate(-50%,-50%) scale(1.08);background:var(--amber-soft)}
+      .vid-play:focus-visible{outline:2px solid var(--amber);outline-offset:-2px}
+      .vid-meta{padding:16px 18px 18px;display:flex;flex-direction:column;gap:9px}
+      .vid-meta .vt{font-family:"Sora",sans-serif;font-weight:700;font-size:15.5px;line-height:1.35}
+      .vid-meta .vrow{display:flex;align-items:center;justify-content:space-between;gap:10px;flex-wrap:wrap}
+      .vid-meta .vcat{
+        font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;
+        letter-spacing:.12em;text-transform:uppercase;color:var(--muted-2);
+      }
+      .badge{
+        font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:11px;font-weight:600;
+        letter-spacing:.08em;text-transform:uppercase;color:var(--amber);
+        border:1px solid var(--line-amber);border-radius:999px;padding:4px 11px;background:var(--amber-dim);
+        white-space:nowrap;
+      }
+
+      /* ---------- Ad result screenshots ---------- */
+      .group-label{
+        display:flex;align-items:center;gap:14px;margin:8px 0 22px;
+        font-family:"Sora",sans-serif;font-weight:800;font-size:21px;
+      }
+      .group-label .count{
+        font-family:"IBM Plex Mono",ui-monospace,monospace;font-size:12px;font-weight:600;
+        letter-spacing:.1em;color:var(--ink-on-amber);background:var(--amber);
+        border-radius:999px;padding:4px 12px;
+      }
+      .group-label + .shot-grid{margin-bottom:48px}
+      .shot-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+      .shot-card{
+        background:var(--panel);border:1px solid var(--line);border-radius:var(--radius);
+        overflow:hidden;display:flex;flex-direction:column;
+      }
+      .shot-card img{width:100%;height:auto;display:block;background:var(--bg-2)}
+      .shot-meta{padding:16px 18px 18px;display:flex;flex-direction:column;gap:9px;margin-top:auto}
+      .shot-meta .st{font-family:"Sora",sans-serif;font-weight:700;font-size:15.5px;line-height:1.35}
+      .shot-meta .badge{align-self:flex-start}
+
+      /* ---------- CTA strip ---------- */
+      .cta-strip{
+        margin:72px 0 84px;background:var(--panel);border:1px solid var(--line-amber);
+        border-radius:24px;padding:44px 40px;text-align:center;position:relative;overflow:hidden;
+      }
+      .cta-strip::before{
+        content:"";position:absolute;inset:0;pointer-events:none;
+        background:radial-gradient(60% 90% at 50% 0%, rgba(255,184,0,.13), transparent 70%);
+      }
+      .cta-strip h2{font-size:clamp(28px,4vw,42px);font-weight:800;position:relative}
+      .cta-strip p{margin:14px auto 28px;color:var(--muted);max-width:520px;position:relative}
+      .cta-strip .btn{position:relative}
+
+      /* ---------- Footer ---------- */
+      footer.site{border-top:1px solid var(--line);background:rgba(6,6,7,.94);padding:34px 0}
+      .foot-row{
+        display:flex;align-items:center;justify-content:space-between;gap:16px;flex-wrap:wrap;
+        font-size:14.5px;color:var(--muted-2);
+      }
+      .foot-links{display:flex;gap:26px;flex-wrap:wrap}
+      .foot-links a{text-decoration:none;color:var(--muted);font-weight:600;min-height:44px;display:inline-flex;align-items:center}
+      .foot-links a:hover{color:var(--amber)}
+
+      /* ---------- Responsive ---------- */
+      @media (max-width:1020px){
+        .stats-band{grid-template-columns:repeat(3,1fr)}
+        .case-grid,.testi-grid{grid-template-columns:repeat(2,1fr)}
+        .vid-grid{grid-template-columns:repeat(3,1fr)}
+        .shot-grid{grid-template-columns:repeat(2,1fr)}
+      }
+      @media (max-width:640px){
+        .wrap{padding:0 20px}
+        .nav-inner{padding:12px 20px}
+        .hero{padding-top:52px}
+        .stats-band{grid-template-columns:repeat(2,1fr)}
+        .stats-band .stat-card:last-child{grid-column:span 2}
+        .case-grid,.testi-grid{grid-template-columns:1fr}
+        .vid-grid{grid-template-columns:repeat(2,1fr)}
+        .shot-grid{grid-template-columns:1fr}
+        section{padding-top:60px}
+        .cta-strip{padding:36px 24px;margin-bottom:64px}
+        .foot-row{flex-direction:column;align-items:flex-start}
+      }
+      @media (prefers-reduced-motion: reduce){
+        html{scroll-behavior:auto}
+        .btn,.filter-chips button,.vid-play .play-ic{transition:none}
+      }
+    </style>
+  </head>
+  <body>
+    <header class="nav">
+      <div class="nav-inner">
+        <a class="wordmark" href="index.html">DIGI<span>TREAMS</span><i>.</i></a>
+        <a class="back-link" href="index.html">← Back to home</a>
+      </div>
+    </header>
+
+    <main>
+      <!-- HERO + STATS -->
+      <div class="hero">
+        <div class="wrap">
+          <span class="sec-tag">Portfolio &amp; case studies</span>
+          <h1>Portfolio</h1>
+          <p class="lead">Real campaigns, real numbers — a snapshot of the work behind the results.</p>
+          <div class="stats-band">
+            <div class="stat-card"><div class="sv">50+</div><div class="sl">Clients served</div></div>
+            <div class="stat-card"><div class="sv">200+</div><div class="sl">Campaigns run</div></div>
+            <div class="stat-card"><div class="sv">4.9</div><div class="sl">Average client rating</div></div>
+            <div class="stat-card"><div class="sv">28</div><div class="sl">AI UGC videos live</div></div>
+            <div class="stat-card"><div class="sv">13</div><div class="sl">Industries served</div></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- CASE RESULTS -->
+      <section>
+        <div class="wrap">
+          <div class="sec-head">
+            <h2>Results that <span class="amber">speak</span> for themselves.</h2>
+            <p>The headline numbers from our published case results, service by service.</p>
+          </div>
+          <div class="case-grid">
+            <article class="case-card">
+              <div class="svc">Meta Ads</div>
+              <div class="cv">6.1x</div>
+              <div class="cl">Average return on ad spend</div>
+            </article>
+            <article class="case-card">
+              <div class="svc">Google Ads</div>
+              <div class="cv">8.4%</div>
+              <div class="cl">Average click-through rate</div>
+            </article>
+            <article class="case-card">
+              <div class="svc">AI UGC Campaigns</div>
+              <div class="cv">−55%</div>
+              <div class="cl">Cost per acquisition reduction</div>
+            </article>
+            <article class="case-card">
+              <div class="svc">TikTok Ads</div>
+              <div class="cv">2.1M</div>
+              <div class="cl">Organic reach generated</div>
+            </article>
+            <article class="case-card">
+              <div class="svc">Social Media Management</div>
+              <div class="cv">+340%</div>
+              <div class="cl">Inbound lead increase</div>
+            </article>
+            <article class="case-card">
+              <div class="svc">Lead Generation</div>
+              <div class="cv">148</div>
+              <div class="cl">Qualified leads in 30 days</div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- AI UGC VIDEOS -->
+      <section>
+        <div class="wrap">
+          <div class="sec-head">
+            <h2>AI UGC <span class="amber">Videos.</span></h2>
+            <p>28 AI UGC videos across 13 industries — press play.</p>
+          </div>
+          <div class="filter-chips" id="vidFilters" role="group" aria-label="Filter videos by category">
+            <button type="button" class="active" data-filter="all">All</button>
+            <button type="button" data-filter="digital-marketing">Digital Marketing</button>
+            <button type="button" data-filter="beauty-salon">Beauty Salon</button>
+            <button type="button" data-filter="dental">Dental</button>
+            <button type="button" data-filter="e-commerce">E-Commerce</button>
+            <button type="button" data-filter="gym-fitness">Gym / Fitness</button>
+            <button type="button" data-filter="home-improvement">Home Improvement</button>
+            <button type="button" data-filter="hvac">HVAC</button>
+            <button type="button" data-filter="pet-clinic">Pet Clinic</button>
+            <button type="button" data-filter="plumber">Plumber</button>
+            <button type="button" data-filter="roofing">Roofing</button>
+            <button type="button" data-filter="restaurant">Restaurant</button>
+          </div>
+          <div class="vid-grid" id="vidGrid">
+            <article class="vid-card" data-cat="digital-marketing">
+              <div class="vid-frame"><button type="button" class="vid-play" data-vid="8Txro6p0dwo" aria-label="Play video: Digitreams Agency Overview"><img src="https://i.ytimg.com/vi/8Txro6p0dwo/hqdefault.jpg" alt="" loading="lazy" /><span class="play-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></div>
+              <div class="vid-meta"><div class="vt">Digitreams Agency Overview</div><div class="vrow"><span class="vcat">Digital Marketing</span><span class="badge">Official Service</span></div></div>
+            </article>
+            <article class="vid-card" data-cat="digital-marketing">
+              <div class="vid-frame"><button type="button" class="vid-play" data-vid="EKBNu53h1mY" aria-label="Play video: Professional Marketing Intro"><img src="https://i.ytimg.com/vi/EKBNu53h1mY/hqdefault.jpg" alt="" loading="lazy" /><span class="play-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></div>
+              <div class="vid-meta"><div class="vt">Professional Marketing Intro</div><div class="vrow"><span class="vcat">Digital Marketing</span><span class="badge">Strategy First</span></div></div>
+            </article>
+            <article class="vid-card" data-cat="digital-marketing">
+              <div class="vid-frame"><button type="button" class="vid-play" data-vid="qNESLzn6KXQ" aria-label="Play video: AI Powered Ad Strategy"><img src="https://i.ytimg.com/vi/qNESLzn6KXQ/hqdefault.jpg" alt="" loading="lazy" /><span class="play-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></div>
+              <div class="vid-meta"><div class="vt">AI Powered Ad Strategy</div><div class="vrow"><span class="vcat">Digital Marketing</span><span class="badge">15+ Yrs Exp</span></div></div>
+            </article>
+            <article class="vid-card" data-cat="digital-marketing">
+              <div class="vid-frame"><button type="button" class="vid-play" data-vid="DCt2ZQOhraY" aria-label="Play video: Digital Growth Solutions"><img src="https://i.ytimg.com/vi/DCt2ZQOhraY/hqdefault.jpg" alt="" loading="lazy" /><span class="play-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></div>
+              <div class="vid-meta"><div class="vt">Digital Growth Solutions</div><div class="vrow"><span class="vcat">Digital Marketing</span><span class="badge">Scale Fast</span></div></div>
+            </article>
+            <article class="vid-card" data-cat="digital-marketing">
+              <div class="vid-frame"><button type="button" class="vid-play" data-vid="M3iiQQrePGY" aria-label="Play video: Agency Process &amp; ROI"><img src="https://i.ytimg.com/vi/M3iiQQrePGY/hqdefault.jpg" alt="" loading="lazy" /><span class="play-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></div>
+              <div class="vid-meta"><div class="vt">Agency Process &amp; ROI</div><div class="vrow"><span class="vcat">Digital Marketing</span><span class="badge">Proven Results</span></div></div>
+            </article>
+            <article class="vid-card" data-cat="digital-marketing">
+              <div class="vid-frame"><button type="button" class="vid-play" data-vid="mVy1TKNeqLg" aria-label="Play video: Digitreams Service Showcase"><img src="https://i.ytimg.com/vi/mVy1TKNeqLg/hqdefault.jpg" alt="" loading="lazy" /><span class="play-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></div>
+              <div class="vid-meta"><div class="vt">Digitreams Service Showcase</div><div class="vrow"><span class="vcat">Digital Marketing</span><span class="badge">Client Growth</span></div></div>
+            </article>
+            <article class="vid-card" data-cat="beauty-salon">
+              <div class="vid-frame"><button type="button" class="vid-play" data-vid="nLNnyD99zV0" aria-label="Play video: Beauty Salon Experience"><img src="https://i.ytimg.com/vi/nLNnyD99zV0/hqdefault.jpg" alt="" loading="lazy" /><span class="play-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></div>
+              <div class="vid-meta"><div class="vt">Beauty Salon Experience</div><div class="vrow"><span class="vcat">Beauty Salon</span><span class="badge">-40% CPA</span></div></div>
+            </article>
+            <article class="vid-card" data-cat="beauty-salon">
+              <div class="vid-frame"><button type="button" class="vid-play" data-vid="LKD-oWE_nfs" aria-label="Play video: Premium Salon UGC Ad"><img src="https://i.ytimg.com/vi/LKD-oWE_nfs/hqdefault.jpg" alt="" loading="lazy" /><span class="play-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></div>
+              <div class="vid-meta"><div class="vt">Premium Salon UGC Ad</div><div class="vrow"><span class="vcat">Beauty Salon</span><span class="badge">High Engagement</span></div></div>
+            </article>
+            <article class="vid-card" data-cat="beauty-salon">
+              <div class="vid-frame"><button type="button" class="vid-play" data-vid="8mWhPXaCjg0" aria-label="Play video: Skincare &amp; Beauty Hook"><img src="https://i.ytimg.com/vi/8mWhPXaCjg0/hqdefault.jpg" alt="" loading="lazy" /><span class="play-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></div>
+              <div class="vid-meta"><div class="vt">Skincare &amp; Beauty Hook</div><div class="vrow"><span class="vcat">Beauty Salon</span><span class="badge">Conversion Focus</span></div></div>
+            </article>
+            <article class="vid-card" data-cat="beauty-salon">
+              <div class="vid-frame"><button type="button" class="vid-play" data-vid="hLbLnSWp9sw" aria-label="Play video: Salon Transformation Video"><img src="https://i.ytimg.com/vi/hLbLnSWp9sw/hqdefault.jpg" alt="" loading="lazy" /><span class="play-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></div>
+              <div class="vid-meta"><div class="vt">Salon Transformation Video</div><div class="vrow"><span class="vcat">Beauty Salon</span><span class="badge">Meta Ads Ready</span></div></div>
+            </article>
+            <article class="vid-card" data-cat="dental">
+              <div class="vid-frame"><button type="button" class="vid-play" data-vid="lR5N7SEBKsA" aria-label="Play video: Dental Clinic Patient Story"><img src="https://i.ytimg.com/vi/lR5N7SEBKsA/hqdefault.jpg" alt="" loading="lazy" /><span class="play-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></div>
+              <div class="vid-meta"><div class="vt">Dental Clinic Patient Story</div><div class="vrow"><span class="vcat">Dental</span><span class="badge">148 Leads</span></div></div>
+            </article>
+            <article class="vid-card" data-cat="dental">
+              <div class="vid-frame"><button type="button" class="vid-play" data-vid="2G41X6qL-X0" aria-label="Play video: Professional Dental Care Ad"><img src="https://i.ytimg.com/vi/2G41X6qL-X0/hqdefault.jpg" alt="" loading="lazy" /><span class="play-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></div>
+              <div class="vid-meta"><div class="vt">Professional Dental Care Ad</div><div class="vrow"><span class="vcat">Dental</span><span class="badge">Trust Driven</span></div></div>
+            </article>
+            <article class="vid-card" data-cat="dental">
+              <div class="vid-frame"><button type="button" class="vid-play" data-vid="2EmMELeJxCs" aria-label="Play video: Smile Restoration UGC"><img src="https://i.ytimg.com/vi/2EmMELeJxCs/hqdefault.jpg" alt="" loading="lazy" /><span class="play-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></div>
+              <div class="vid-meta"><div class="vt">Smile Restoration UGC</div><div class="vrow"><span class="vcat">Dental</span><span class="badge">+4.5x ROAS</span></div></div>
+            </article>
+            <article class="vid-card" data-cat="e-commerce">
+              <div class="vid-frame"><button type="button" class="vid-play" data-vid="MFMn8J6DXoM" aria-label="Play video: Premium Beauty Serum Ad"><img src="https://i.ytimg.com/vi/MFMn8J6DXoM/hqdefault.jpg" alt="" loading="lazy" /><span class="play-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></div>
+              <div class="vid-meta"><div class="vt">Premium Beauty Serum Ad</div><div class="vrow"><span class="vcat">E-Commerce</span><span class="badge">6.1x ROAS</span></div></div>
+            </article>
+            <article class="vid-card" data-cat="gym-fitness">
+              <div class="vid-frame"><button type="button" class="vid-play" data-vid="SAsS9kaa0Bs" aria-label="Play video: Fitness &amp; Gym Motivation"><img src="https://i.ytimg.com/vi/SAsS9kaa0Bs/hqdefault.jpg" alt="" loading="lazy" /><span class="play-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></div>
+              <div class="vid-meta"><div class="vt">Fitness &amp; Gym Motivation</div><div class="vrow"><span class="vcat">Gym / Fitness</span><span class="badge">Lead Gen Ready</span></div></div>
+            </article>
+            <article class="vid-card" data-cat="gym-fitness">
+              <div class="vid-frame"><button type="button" class="vid-play" data-vid="54dRXXWMpmU" aria-label="Play video: Gym Membership UGC"><img src="https://i.ytimg.com/vi/54dRXXWMpmU/hqdefault.jpg" alt="" loading="lazy" /><span class="play-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></div>
+              <div class="vid-meta"><div class="vt">Gym Membership UGC</div><div class="vrow"><span class="vcat">Gym / Fitness</span><span class="badge">High CTR</span></div></div>
+            </article>
+            <article class="vid-card" data-cat="gym-fitness">
+              <div class="vid-frame"><button type="button" class="vid-play" data-vid="dRWDp-n2gj4" aria-label="Play video: Workout Results Showcase"><img src="https://i.ytimg.com/vi/dRWDp-n2gj4/hqdefault.jpg" alt="" loading="lazy" /><span class="play-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></div>
+              <div class="vid-meta"><div class="vt">Workout Results Showcase</div><div class="vrow"><span class="vcat">Gym / Fitness</span><span class="badge">ROI Focused</span></div></div>
+            </article>
+            <article class="vid-card" data-cat="home-improvement">
+              <div class="vid-frame"><button type="button" class="vid-play" data-vid="ExUw_0zR1jE" aria-label="Play video: Home Improvement Service"><img src="https://i.ytimg.com/vi/ExUw_0zR1jE/hqdefault.jpg" alt="" loading="lazy" /><span class="play-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></div>
+              <div class="vid-meta"><div class="vt">Home Improvement Service</div><div class="vrow"><span class="vcat">Home Improvement</span><span class="badge">Trust Built</span></div></div>
+            </article>
+            <article class="vid-card" data-cat="hvac">
+              <div class="vid-frame"><button type="button" class="vid-play" data-vid="B4ww4w7q66U" aria-label="Play video: HVAC Maintenance Promo"><img src="https://i.ytimg.com/vi/B4ww4w7q66U/hqdefault.jpg" alt="" loading="lazy" /><span class="play-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></div>
+              <div class="vid-meta"><div class="vt">HVAC Maintenance Promo</div><div class="vrow"><span class="vcat">HVAC</span><span class="badge">Local Lead Gen</span></div></div>
+            </article>
+            <article class="vid-card" data-cat="pet-clinic">
+              <div class="vid-frame"><button type="button" class="vid-play" data-vid="V6mApYCAfNo" aria-label="Play video: Pet Clinic Care Story"><img src="https://i.ytimg.com/vi/V6mApYCAfNo/hqdefault.jpg" alt="" loading="lazy" /><span class="play-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></div>
+              <div class="vid-meta"><div class="vt">Pet Clinic Care Story</div><div class="vrow"><span class="vcat">Pet Clinic</span><span class="badge">High Retention</span></div></div>
+            </article>
+            <article class="vid-card" data-cat="pet-clinic">
+              <div class="vid-frame"><button type="button" class="vid-play" data-vid="RsgfbPZHZWE" aria-label="Play video: Veterinary Service UGC"><img src="https://i.ytimg.com/vi/RsgfbPZHZWE/hqdefault.jpg" alt="" loading="lazy" /><span class="play-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></div>
+              <div class="vid-meta"><div class="vt">Veterinary Service UGC</div><div class="vrow"><span class="vcat">Pet Clinic</span><span class="badge">Caring &amp; Trust</span></div></div>
+            </article>
+            <article class="vid-card" data-cat="pet-clinic">
+              <div class="vid-frame"><button type="button" class="vid-play" data-vid="6KXJRqwoPBg" aria-label="Play video: Pet Wellness Campaign"><img src="https://i.ytimg.com/vi/6KXJRqwoPBg/hqdefault.jpg" alt="" loading="lazy" /><span class="play-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></div>
+              <div class="vid-meta"><div class="vt">Pet Wellness Campaign</div><div class="vrow"><span class="vcat">Pet Clinic</span><span class="badge">TikTok Viral</span></div></div>
+            </article>
+            <article class="vid-card" data-cat="plumber">
+              <div class="vid-frame"><button type="button" class="vid-play" data-vid="7xQaKjaqWpQ" aria-label="Play video: Emergency Plumbing Ad"><img src="https://i.ytimg.com/vi/7xQaKjaqWpQ/hqdefault.jpg" alt="" loading="lazy" /><span class="play-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></div>
+              <div class="vid-meta"><div class="vt">Emergency Plumbing Ad</div><div class="vrow"><span class="vcat">Plumber</span><span class="badge">Local Reach</span></div></div>
+            </article>
+            <article class="vid-card" data-cat="plumber">
+              <div class="vid-frame"><button type="button" class="vid-play" data-vid="Ju0UejbhSvk" aria-label="Play video: Professional Plumbing Care"><img src="https://i.ytimg.com/vi/Ju0UejbhSvk/hqdefault.jpg" alt="" loading="lazy" /><span class="play-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></div>
+              <div class="vid-meta"><div class="vt">Professional Plumbing Care</div><div class="vrow"><span class="vcat">Plumber</span><span class="badge">High Conversion</span></div></div>
+            </article>
+            <article class="vid-card" data-cat="roofing">
+              <div class="vid-frame"><button type="button" class="vid-play" data-vid="TVJdL_yelE0" aria-label="Play video: Roofing Solutions UGC"><img src="https://i.ytimg.com/vi/TVJdL_yelE0/hqdefault.jpg" alt="" loading="lazy" /><span class="play-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></div>
+              <div class="vid-meta"><div class="vt">Roofing Solutions UGC</div><div class="vrow"><span class="vcat">Roofing</span><span class="badge">USA Market</span></div></div>
+            </article>
+            <article class="vid-card" data-cat="restaurant">
+              <div class="vid-frame"><button type="button" class="vid-play" data-vid="kw2VSnus9r4" aria-label="Play video: Restaurant Experience Ad"><img src="https://i.ytimg.com/vi/kw2VSnus9r4/hqdefault.jpg" alt="" loading="lazy" /><span class="play-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></div>
+              <div class="vid-meta"><div class="vt">Restaurant Experience Ad</div><div class="vrow"><span class="vcat">Restaurant</span><span class="badge">2.1M Reach</span></div></div>
+            </article>
+            <article class="vid-card" data-cat="restaurant">
+              <div class="vid-frame"><button type="button" class="vid-play" data-vid="s95pkfhW2WE" aria-label="Play video: Foodie Recommendation UGC"><img src="https://i.ytimg.com/vi/s95pkfhW2WE/hqdefault.jpg" alt="" loading="lazy" /><span class="play-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></div>
+              <div class="vid-meta"><div class="vt">Foodie Recommendation UGC</div><div class="vrow"><span class="vcat">Restaurant</span><span class="badge">Booked Out</span></div></div>
+            </article>
+            <article class="vid-card" data-cat="restaurant">
+              <div class="vid-frame"><button type="button" class="vid-play" data-vid="t2PmGfLd_Vw" aria-label="Play video: Culinary Excellence Promo"><img src="https://i.ytimg.com/vi/t2PmGfLd_Vw/hqdefault.jpg" alt="" loading="lazy" /><span class="play-ic" aria-hidden="true"><svg viewBox="0 0 24 24" width="26" height="26" fill="currentColor"><path d="M8 5.5v13l11-6.5z"/></svg></span></button></div>
+              <div class="vid-meta"><div class="vt">Culinary Excellence Promo</div><div class="vrow"><span class="vcat">Restaurant</span><span class="badge">Instagram Ready</span></div></div>
+            </article>
+          </div>
+        </div>
+      </section>
+      <!-- AD RESULTS -->
+      <section>
+        <div class="wrap">
+          <div class="sec-head">
+            <h2>Ad <span class="amber">Results.</span></h2>
+            <p>Screenshots from real Meta and Google campaigns — the dashboards behind the numbers above.</p>
+          </div>
+          <h3 class="group-label">Meta Ads <span class="count">25 RESULTS</span></h3>
+          <div class="shot-grid">
+            <article class="shot-card">
+              <img src="https://portfolio.digitreams.com/screenshots/meta/meta-01.PNG" alt="Meta Ads result screenshot — Real Estate Lead Gen" loading="lazy" />
+              <div class="shot-meta"><div class="st">Real Estate Lead Gen</div><span class="badge">148 Leads</span></div>
+            </article>
+            <article class="shot-card">
+              <img src="https://portfolio.digitreams.com/screenshots/meta/meta-02.PNG" alt="Meta Ads result screenshot — Property Listing Campaign" loading="lazy" />
+              <div class="shot-meta"><div class="st">Property Listing Campaign</div><span class="badge">$8 CPL</span></div>
+            </article>
+            <article class="shot-card">
+              <img src="https://portfolio.digitreams.com/screenshots/meta/meta-03.PNG" alt="Meta Ads result screenshot — Luxury Homes Retargeting" loading="lazy" />
+              <div class="shot-meta"><div class="st">Luxury Homes — Retargeting</div><span class="badge">3.8x ROAS</span></div>
+            </article>
+            <article class="shot-card">
+              <img src="https://portfolio.digitreams.com/screenshots/meta/meta-04.PNG" alt="Meta Ads result screenshot — Commercial Property Ads" loading="lazy" />
+              <div class="shot-meta"><div class="st">Commercial Property Ads</div><span class="badge">Scale Fast</span></div>
+            </article>
+            <article class="shot-card">
+              <img src="https://portfolio.digitreams.com/screenshots/meta/meta-05.PNG" alt="Meta Ads result screenshot — Real Estate Lead Funnel" loading="lazy" />
+              <div class="shot-meta"><div class="st">Real Estate Lead Funnel</div><span class="badge">Low CPL</span></div>
+            </article>
+            <article class="shot-card">
+              <img src="https://portfolio.digitreams.com/screenshots/meta/meta-06.PNG" alt="Meta Ads result screenshot — Property Developer Campaign" loading="lazy" />
+              <div class="shot-meta"><div class="st">Property Developer Campaign</div><span class="badge">High Intent</span></div>
+            </article>
+            <article class="shot-card">
+              <img src="https://portfolio.digitreams.com/screenshots/meta/meta-07.PNG" alt="Meta Ads result screenshot — Housing Promo" loading="lazy" />
+              <div class="shot-meta"><div class="st">Housing Promo — Meta Ads</div><span class="badge">4.1x ROAS</span></div>
+            </article>
+            <article class="shot-card">
+              <img src="https://portfolio.digitreams.com/screenshots/meta/meta-08.PNG" alt="Meta Ads result screenshot — Real Estate Awareness Ads" loading="lazy" />
+              <div class="shot-meta"><div class="st">Real Estate Awareness Ads</div><span class="badge">2.4M Reach</span></div>
+            </article>
+            <article class="shot-card">
+              <img src="https://portfolio.digitreams.com/screenshots/meta/meta-09.PNG" alt="Meta Ads result screenshot — Realtor Lead Campaign" loading="lazy" />
+              <div class="shot-meta"><div class="st">Realtor Lead Campaign</div><span class="badge">92 Leads</span></div>
+            </article>
+            <article class="shot-card">
+              <img src="https://portfolio.digitreams.com/screenshots/meta/meta-10.PNG" alt="Meta Ads result screenshot — New Listings Promo" loading="lazy" />
+              <div class="shot-meta"><div class="st">New Listings Promo</div><span class="badge">Full Funnel</span></div>
+            </article>
+            <article class="shot-card">
+              <img src="https://portfolio.digitreams.com/screenshots/meta/meta-11.PNG" alt="Meta Ads result screenshot — Beauty Salon Growth Ads" loading="lazy" />
+              <div class="shot-meta"><div class="st">Beauty Salon Growth Ads</div><span class="badge">-40% CPA</span></div>
+            </article>
+            <article class="shot-card">
+              <img src="https://portfolio.digitreams.com/screenshots/meta/meta-12.PNG" alt="Meta Ads result screenshot — Skincare Brand Meta Ads" loading="lazy" />
+              <div class="shot-meta"><div class="st">Skincare Brand Meta Ads</div><span class="badge">4.2x ROAS</span></div>
+            </article>
+            <article class="shot-card">
+              <img src="https://portfolio.digitreams.com/screenshots/meta/meta-13.PNG" alt="Meta Ads result screenshot — Lash Studio Campaign" loading="lazy" />
+              <div class="shot-meta"><div class="st">Lash Studio Campaign</div><span class="badge">High Volume</span></div>
+            </article>
+            <article class="shot-card">
+              <img src="https://portfolio.digitreams.com/screenshots/meta/meta-14.PNG" alt="Meta Ads result screenshot — Dental Clinic Lead Ads" loading="lazy" />
+              <div class="shot-meta"><div class="st">Dental Clinic Lead Ads</div><span class="badge">64 Bookings</span></div>
+            </article>
+            <article class="shot-card">
+              <img src="https://portfolio.digitreams.com/screenshots/meta/meta-15.PNG" alt="Meta Ads result screenshot — Smile Studio FB Ads" loading="lazy" />
+              <div class="shot-meta"><div class="st">Smile Studio — FB Ads</div><span class="badge">Trust Driven</span></div>
+            </article>
+            <article class="shot-card">
+              <img src="https://portfolio.digitreams.com/screenshots/meta/meta-16.PNG" alt="Meta Ads result screenshot — Dental Implants Lead Gen" loading="lazy" />
+              <div class="shot-meta"><div class="st">Dental Implants Lead Gen</div><span class="badge">Low CPL</span></div>
+            </article>
+            <article class="shot-card">
+              <img src="https://portfolio.digitreams.com/screenshots/meta/meta-17.PNG" alt="Meta Ads result screenshot — Gym Membership Drive" loading="lazy" />
+              <div class="shot-meta"><div class="st">Gym Membership Drive</div><span class="badge">52 Sign-ups</span></div>
+            </article>
+            <article class="shot-card">
+              <img src="https://portfolio.digitreams.com/screenshots/meta/meta-18.PNG" alt="Meta Ads result screenshot — Fitness Studio Lead Gen" loading="lazy" />
+              <div class="shot-meta"><div class="st">Fitness Studio Lead Gen</div><span class="badge">High CTR</span></div>
+            </article>
+            <article class="shot-card">
+              <img src="https://portfolio.digitreams.com/screenshots/meta/meta-19.PNG" alt="Meta Ads result screenshot — Restaurant Promo Campaign" loading="lazy" />
+              <div class="shot-meta"><div class="st">Restaurant Promo Campaign</div><span class="badge">2.1M Reach</span></div>
+            </article>
+            <article class="shot-card">
+              <img src="https://portfolio.digitreams.com/screenshots/meta/meta-20.PNG" alt="Meta Ads result screenshot — Food Brand Awareness" loading="lazy" />
+              <div class="shot-meta"><div class="st">Food Brand Awareness</div><span class="badge">Booked Out</span></div>
+            </article>
+            <article class="shot-card">
+              <img src="https://portfolio.digitreams.com/screenshots/meta/meta-21.PNG" alt="Meta Ads result screenshot — Pet Clinic Growth Ads" loading="lazy" />
+              <div class="shot-meta"><div class="st">Pet Clinic Growth Ads</div><span class="badge">High Retention</span></div>
+            </article>
+            <article class="shot-card">
+              <img src="https://portfolio.digitreams.com/screenshots/meta/meta-22.PNG" alt="Meta Ads result screenshot — HVAC Local Meta Ads" loading="lazy" />
+              <div class="shot-meta"><div class="st">HVAC Local Meta Ads</div><span class="badge">Local Reach</span></div>
+            </article>
+            <article class="shot-card">
+              <img src="https://portfolio.digitreams.com/screenshots/meta/meta-23.PNG" alt="Meta Ads result screenshot — Roofing Lead Campaign" loading="lazy" />
+              <div class="shot-meta"><div class="st">Roofing Lead Campaign</div><span class="badge">USA Market</span></div>
+            </article>
+            <article class="shot-card">
+              <img src="https://portfolio.digitreams.com/screenshots/meta/meta-24.PNG" alt="Meta Ads result screenshot — Plumbing Service Ads" loading="lazy" />
+              <div class="shot-meta"><div class="st">Plumbing Service Ads</div><span class="badge">High Conv.</span></div>
+            </article>
+            <article class="shot-card">
+              <img src="https://portfolio.digitreams.com/screenshots/meta/meta-25.PNG" alt="Meta Ads result screenshot — Real Estate Retargeting" loading="lazy" />
+              <div class="shot-meta"><div class="st">Real Estate Retargeting</div><span class="badge">ROI Proven</span></div>
+            </article>
+          </div>
+          <h3 class="group-label">Google Ads <span class="count">9 RESULTS</span></h3>
+          <div class="shot-grid">
+            <article class="shot-card">
+              <img src="https://portfolio.digitreams.com/screenshots/google/google-01.jpeg" alt="Google Ads result screenshot — Dental Clinic Google Search" loading="lazy" />
+              <div class="shot-meta"><div class="st">Dental Clinic Google Search</div><span class="badge">8.4% CTR</span></div>
+            </article>
+            <article class="shot-card">
+              <img src="https://portfolio.digitreams.com/screenshots/google/google-02.jpeg" alt="Google Ads result screenshot — Orthodontist PPC Campaign" loading="lazy" />
+              <div class="shot-meta"><div class="st">Orthodontist PPC Campaign</div><span class="badge">64 Patients</span></div>
+            </article>
+            <article class="shot-card">
+              <img src="https://portfolio.digitreams.com/screenshots/google/google-03.jpeg" alt="Google Ads result screenshot — Dental Implants PPC" loading="lazy" />
+              <div class="shot-meta"><div class="st">Dental Implants — PPC</div><span class="badge">Quality Score 9</span></div>
+            </article>
+            <article class="shot-card">
+              <img src="https://portfolio.digitreams.com/screenshots/google/google-04.jpeg" alt="Google Ads result screenshot — HVAC Local Search Ads" loading="lazy" />
+              <div class="shot-meta"><div class="st">HVAC Local Search Ads</div><span class="badge">Local Reach</span></div>
+            </article>
+            <article class="shot-card">
+              <img src="https://portfolio.digitreams.com/screenshots/google/google-05.jpeg" alt="Google Ads result screenshot — AC Repair Google Ads" loading="lazy" />
+              <div class="shot-meta"><div class="st">AC Repair Google Ads</div><span class="badge">-55% CPC</span></div>
+            </article>
+            <article class="shot-card">
+              <img src="https://portfolio.digitreams.com/screenshots/google/google-06.jpeg" alt="Google Ads result screenshot — Emergency Plumber PPC" loading="lazy" />
+              <div class="shot-meta"><div class="st">Emergency Plumber PPC</div><span class="badge">Top Position</span></div>
+            </article>
+            <article class="shot-card">
+              <img src="https://portfolio.digitreams.com/screenshots/google/google-07.jpeg" alt="Google Ads result screenshot — Plumbing Services Search" loading="lazy" />
+              <div class="shot-meta"><div class="st">Plumbing Services Search</div><span class="badge">High Intent</span></div>
+            </article>
+            <article class="shot-card">
+              <img src="https://portfolio.digitreams.com/screenshots/google/google-08.jpeg" alt="Google Ads result screenshot — Real Estate Google Ads" loading="lazy" />
+              <div class="shot-meta"><div class="st">Real Estate Google Ads</div><span class="badge">3.2x ROAS</span></div>
+            </article>
+            <article class="shot-card">
+              <img src="https://portfolio.digitreams.com/screenshots/google/google-09.jpeg" alt="Google Ads result screenshot — Beauty Salon Local Ads" loading="lazy" />
+              <div class="shot-meta"><div class="st">Beauty Salon Local Ads</div><span class="badge">Booked Out</span></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- INDUSTRIES -->
+      <section>
+        <div class="wrap">
+          <div class="sec-head">
+            <h2>Work across <span class="amber">13 industries.</span></h2>
+            <p>Brands in these industries trust Digitreams with their growth.</p>
+          </div>
+          <div class="ind-chips">
+            <span>Real Estate</span>
+            <span>Beauty Salon</span>
+            <span>Dental Clinic</span>
+            <span>E-Commerce</span>
+            <span>Gym &amp; Fitness</span>
+            <span>Restaurant</span>
+            <span>Pet Clinic</span>
+            <span>Roofing</span>
+            <span class="more">and 5 more industries</span>
+          </div>
+        </div>
+      </section>
+
+      <!-- TESTIMONIALS -->
+      <section>
+        <div class="wrap">
+          <div class="sec-head">
+            <h2>What our clients <span class="amber">say.</span></h2>
+          </div>
+          <p class="rated-line"><span class="stars" aria-hidden="true">★★★★★</span> Rated 4.9 out of 5 from verified client reviews.</p>
+          <div class="testi-grid">
+            <article class="testi">
+              <div class="stars" aria-hidden="true">★★★★★</div>
+              <blockquote>“Digitreams completely transformed our ad performance. We went from burning money to a consistent 4x return within 6 weeks.”</blockquote>
+              <div><div class="who">Mike R.</div><div class="role">Founder, StyleHive</div></div>
+              <span class="ind">E-Commerce</span>
+            </article>
+            <article class="testi">
+              <div class="stars" aria-hidden="true">★★★★★</div>
+              <blockquote>“148 qualified leads in 30 days from Facebook Ads alone. The team knows exactly what they're doing.”</blockquote>
+              <div><div class="who">James D.</div><div class="role">Director, Premier Real Estate</div></div>
+              <span class="ind">Real Estate</span>
+            </article>
+            <article class="testi">
+              <div class="stars" aria-hidden="true">★★★★★</div>
+              <blockquote>“Our Google Ads CTR went from 1.8% to 8.4%! 64 new patient appointments in the first month alone.”</blockquote>
+              <div><div class="who">Dr. Daniel P.</div><div class="role">Owner, SmilePro Dental</div></div>
+              <span class="ind">Healthcare</span>
+            </article>
+            <article class="testi">
+              <div class="stars" aria-hidden="true">★★★★★</div>
+              <blockquote>“TikTok was a mystery to us. 2.1M organic reach — our restaurant is booked out every weekend!”</blockquote>
+              <div><div class="who">Tony C.</div><div class="role">CEO, Flavor Fusion Group</div></div>
+              <span class="ind">Food &amp; Beverage</span>
+            </article>
+            <article class="testi">
+              <div class="stars" aria-hidden="true">★★★★★</div>
+              <blockquote>“Our law firm PPC campaigns were a disaster before. They cut CPC by 55% and tripled conversions.”</blockquote>
+              <div><div class="who">Rachel J.</div><div class="role">Managing Partner, Justice Law</div></div>
+              <span class="ind">Legal</span>
+            </article>
+            <article class="testi">
+              <div class="stars" aria-hidden="true">★★★★★</div>
+              <blockquote>“LinkedIn became our #1 lead source after 3 months. 340% increase in inbound leads.”</blockquote>
+              <div><div class="who">Brian W.</div><div class="role">CEO, CloudStack SaaS</div></div>
+              <span class="ind">B2B / SaaS</span>
+            </article>
+            <article class="testi">
+              <div class="stars" aria-hidden="true">★★★★★</div>
+              <blockquote>“6.1x ROAS consistently — I'll never share this secret agency with my competitors!”</blockquote>
+              <div><div class="who">Nina P.</div><div class="role">Owner, Urban Threads</div></div>
+              <span class="ind">Fashion</span>
+            </article>
+            <article class="testi">
+              <div class="stars" aria-hidden="true">★★★★★</div>
+              <blockquote>“Scaled from $500 to $5,000/month in ad spend and ROAS actually improved! Their creative strategy is unlike anything.”</blockquote>
+              <div><div class="who">Amanda L.</div><div class="role">CMO, GlowSkin Co.</div></div>
+              <span class="ind">Beauty &amp; Wellness</span>
+            </article>
+            <article class="testi">
+              <div class="stars" aria-hidden="true">★★★★★</div>
+              <blockquote>“The AI UGC content feels genuine, hooks are sharp, and our gym memberships doubled in 45 days.”</blockquote>
+              <div><div class="who">Kevin S.</div><div class="role">Operations Manager, FitLife Studios</div></div>
+              <span class="ind">Fitness</span>
+            </article>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- CTA -->
+      <div class="wrap">
+        <div class="cta-strip">
+          <h2>Want numbers <span class="amber">like these?</span></h2>
+          <p>Start with a free audit. We look at your ads, website and social presence and tell you honestly what is working, what is not, and what to fix first.</p>
+          <a class="btn btn-amber" href="index.html#audit">Start with a free audit →</a>
+        </div>
+      </div>
+    </main>
+
+    <footer class="site">
+      <div class="wrap">
+        <div class="foot-row">
+          <span>© 2026 Digitreams. All rights reserved.</span>
+          <nav class="foot-links" aria-label="Legal">
+            <a href="privacy-policy.html">Privacy Policy</a>
+            <a href="opt-out.html">Opt Out</a>
+          </nav>
+        </div>
+      </div>
+    </footer>
+    <script>
+      (function () {
+        var chips = document.querySelectorAll('#vidFilters button');
+        var cards = document.querySelectorAll('#vidGrid .vid-card');
+        document.querySelectorAll('.vid-play').forEach(function (btn) {
+          btn.addEventListener('click', function () {
+            var frame = btn.parentNode;
+            var iframe = document.createElement('iframe');
+            iframe.src = 'https://www.youtube.com/embed/' + btn.getAttribute('data-vid') + '?autoplay=1&rel=0';
+            iframe.title = btn.getAttribute('aria-label').replace('Play video: ', '');
+            iframe.setAttribute('allow', 'accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share');
+            iframe.setAttribute('referrerpolicy', 'strict-origin-when-cross-origin');
+            iframe.setAttribute('allowfullscreen', '');
+            frame.replaceChild(iframe, btn);
+          });
+        });
+        chips.forEach(function (chip) {
+          chip.addEventListener('click', function () {
+            chips.forEach(function (c) { c.classList.remove('active'); });
+            chip.classList.add('active');
+            var f = chip.getAttribute('data-filter');
+            cards.forEach(function (card) {
+              card.hidden = !(f === 'all' || card.getAttribute('data-cat') === f);
+            });
+          });
+        });
+      })();
+    </script>
+  </body>
+</html>
