@@ -519,24 +519,36 @@
       .social-row a:hover{border-color:var(--amber);color:var(--amber);background:rgba(255,192,0,.06)}
       .social-row a svg{width:19px;height:19px;fill:currentColor;display:block}
       /* Booking section */
-      .book-cta{
-        background:linear-gradient(165deg,var(--panel-2),var(--panel));
-        border:1px solid var(--line-strong);border-radius:22px;overflow:hidden;
-        padding:46px 34px;text-align:center;position:relative;
-      }
-      .book-cta::before{
-        content:"";position:absolute;inset:0;pointer-events:none;
-        background:radial-gradient(60% 55% at 50% 0%,rgba(255,192,0,.10),transparent 65%);
-      }
-      .book-note{
-        font-family:"Sora",sans-serif;font-weight:700;font-size:17px;color:var(--amber-soft);
-        margin-bottom:26px;position:relative;
-      }
-      .book-cta .btn{position:relative}
-      @media (max-width:600px){
-        .book-cta{padding:34px 22px}
-        .book-cta .btn{width:100%;justify-content:center;white-space:normal;text-align:center}
-      }
+      .book-panel{background:linear-gradient(165deg,var(--panel-2),var(--panel));border:1px solid var(--line-strong);border-radius:22px;overflow:hidden;display:grid;grid-template-columns:1fr 1fr}
+      @media (max-width:920px){.book-panel{grid-template-columns:1fr}}
+      .book-pick{padding:36px 34px}
+      .book-form-wrap{padding:36px 34px;background:#08080a;border-left:1px solid var(--line)}
+      @media (max-width:920px){.book-form-wrap{border-left:none;border-top:1px solid var(--line)}}
+      @media (max-width:600px){.book-pick,.book-form-wrap{padding:26px 20px}}
+      .book-step{font-family:"IBM Plex Mono",monospace;font-size:12px;letter-spacing:.13em;text-transform:uppercase;color:var(--muted);margin:0 0 14px;display:flex;justify-content:space-between;gap:10px;flex-wrap:wrap}
+      .book-step b{color:var(--amber);font-weight:600}
+      .book-step .tz{color:var(--amber-soft);letter-spacing:.05em}
+      .day-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:9px;margin-bottom:30px}
+      @media (max-width:520px){.day-grid{grid-template-columns:repeat(3,1fr)}}
+      .slot-grid{display:flex;flex-wrap:wrap;gap:9px}
+      .day-btn,.slot-btn{appearance:none;cursor:pointer;background:#0a0a0c;color:var(--text);border:1px solid var(--line-strong);border-radius:12px;padding:10px 6px;font-weight:700;font-size:14px;min-height:52px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;transition:border-color .15s,background .15s,color .15s}
+      .slot-btn{border-radius:999px;padding:10px 18px;min-height:48px;flex-direction:row;font-family:"Sora",sans-serif}
+      .day-btn small{font-family:"IBM Plex Mono",monospace;font-size:10.5px;letter-spacing:.08em;text-transform:uppercase;color:var(--muted-2);font-weight:600}
+      .day-btn:hover,.slot-btn:hover{border-color:var(--amber)}
+      .day-btn[aria-pressed="true"],.slot-btn[aria-pressed="true"]{background:var(--amber);border-color:var(--amber);color:var(--ink-on-amber)}
+      .day-btn[aria-pressed="true"] small{color:rgba(11,10,6,.65)}
+      .day-btn.is-off,.day-btn:disabled{opacity:.38;cursor:not-allowed;background:#0a0a0c;border-color:var(--line);color:var(--muted-2)}
+      .day-btn.is-off:hover,.day-btn:disabled:hover{border-color:var(--line)}
+      .day-btn .off-lab{font-family:"IBM Plex Mono",monospace;font-size:10px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--muted-2);border:1px solid var(--line);border-radius:999px;padding:2px 8px;margin-top:3px;line-height:1.3}
+      .pick-box{border-radius:14px;padding:6px}
+      .pick-box.need-pick{outline:2px solid #ff4b33;outline-offset:4px}
+      .book-summary{margin-top:22px;font-size:14.5px;color:var(--muted);border-top:1px dashed var(--line-strong);padding-top:16px}
+      .book-summary strong{color:var(--amber-soft)}
+      .book-form-wrap h3{font-size:20px;font-weight:700;margin-bottom:6px}
+      .book-form-wrap .sub{color:var(--muted);font-size:14.5px;margin-bottom:22px}
+      .book-ok{display:none;margin-top:16px;border:1px solid var(--line-amber);background:var(--amber-dim);color:var(--amber-soft);border-radius:11px;padding:13px 16px;font-size:14.5px;font-weight:600}
+      .book-err{display:none;background:rgba(255,90,90,.10);color:#ffb3b3;border:1px solid rgba(255,90,90,.35);border-radius:11px;padding:12px 15px;font-size:14px;margin-bottom:18px}
+      .book-err.show{display:block}
 
       /* ---------- Footer ---------- */
       footer.site{border-top:1px solid var(--line);background:rgba(6,6,7,.94);padding:34px 0 22px}
@@ -561,7 +573,7 @@
         .nav-inner{padding:12px 20px;gap:10px}
         .wordmark img{height:31px}
         footer.site .wordmark img{height:38px}
-        .nav-links .btn-small{padding:9px 15px;font-size:13px}
+        .nav-links .btn-small{padding:9px 14px;font-size:13px;white-space:nowrap}
         /* Hero: headline sized to fit 360px without mid-phrase wraps */
         .hero{padding:118px 0 70px}
         .hero h1{font-size:clamp(2.28rem,10.6vw,2.7rem)}
@@ -897,11 +909,50 @@
           <div class="sec-head rv">
             <div class="sec-tag">No audit needed</div>
             <h2>Book a free <span class="amber">15-minute call</span></h2>
-            <p>Pick a time that suits you. Times are shown in your own timezone, and every call is 15 minutes on Google Meet. Your confirmation and Meet link arrive by email.</p>
+            <p>Pick a weekday and a time. We meet on Google Meet, look at exactly what you need, and give you a clear next step. No pressure, no obligation. Saturdays and Sundays are off, and all times below are shown in your own local time, between 12:00 PM and 4:00 PM.</p>
           </div>
-          <div class="book-cta rv">
-            <p class="book-note">Monday to Friday. No weekends.</p>
-            <a class="btn btn-amber" href="https://calendar.google.com/calendar/u/0/appointments/schedules/AcZssZ13KO5RpIFWePZfzYzdgIU4lpGK416bY0giIJKPcvG7sJ4dHg0LPXnwKYaLa2uwehfjEWStEUIf" target="_blank" rel="noopener">Book Your Free 15-Minute Call</a>
+          <div class="book-panel rv">
+            <div class="book-pick">
+              <p class="book-step"><span><b>Step 1</b>: Pick a day</span><span>Next 14 days · Sat &amp; Sun off</span></p>
+              <div class="pick-box" id="dayPickBox">
+                <div class="day-grid" id="bookDays" role="group" aria-label="Choose a day for your call. Saturdays and Sundays are off."></div>
+              </div>
+              <p class="book-step"><span><b>Step 2</b>: Pick a time</span><span class="tz" id="bookTzLabel">Your local time</span></p>
+              <div class="pick-box" id="slotPickBox">
+                <div class="slot-grid" id="bookSlots" role="group" aria-label="Choose a time slot in your local time. Each call lasts 15 minutes.">
+                  <button type="button" class="slot-btn" data-slot="12:00 PM" aria-pressed="false">12:00 PM</button>
+                  <button type="button" class="slot-btn" data-slot="12:30 PM" aria-pressed="false">12:30 PM</button>
+                  <button type="button" class="slot-btn" data-slot="1:00 PM" aria-pressed="false">1:00 PM</button>
+                  <button type="button" class="slot-btn" data-slot="1:30 PM" aria-pressed="false">1:30 PM</button>
+                  <button type="button" class="slot-btn" data-slot="2:00 PM" aria-pressed="false">2:00 PM</button>
+                  <button type="button" class="slot-btn" data-slot="2:30 PM" aria-pressed="false">2:30 PM</button>
+                  <button type="button" class="slot-btn" data-slot="3:00 PM" aria-pressed="false">3:00 PM</button>
+                  <button type="button" class="slot-btn" data-slot="3:30 PM" aria-pressed="false">3:30 PM</button>
+                </div>
+              </div>
+              <p class="book-summary" id="bookSummary">No day or time picked yet. Choose a weekday and a time in your local time, then send the form and we will email your Google Meet link to confirm your slot.</p>
+            </div>
+            <div class="book-form-wrap">
+              <form id="bookForm" novalidate>
+                <h3>Your details</h3>
+                <p class="sub">15 minutes on Google Meet. We confirm the slot and send the Meet link by email.</p>
+                <div class="book-err" id="bookErr">Please pick a day and a time slot, and add your name and a valid email.</div>
+                <div class="field"><label for="bName">Your name *</label><input id="bName" type="text" autocomplete="name" placeholder="Your full name" /></div>
+                <div class="field"><label for="bEmail">Email *</label><input id="bEmail" type="email" autocomplete="email" placeholder="you@company.com" /></div>
+                <div class="field"><label for="bWhats">WhatsApp number <span>(optional)</span></label><input id="bWhats" type="tel" autocomplete="tel" placeholder="With country code" /></div>
+                <div class="field"><label for="bService">Service</label>
+                  <select id="bService">
+                    <option>Meta Ads</option><option>Google Ads</option><option>AI UGC Video Ads</option>
+                    <option>Social Media Management</option><option>Social Media Marketing</option>
+                    <option>Logo Design</option><option>Video Editing</option><option>Bundles</option><option>Website &amp; SEO</option>
+                  </select>
+                </div>
+                <div class="field"><label for="bNote">Short note <span>(optional)</span></label><textarea id="bNote" placeholder="What do you want to cover on the call?" style="min-height:72px"></textarea></div>
+                <button type="submit" class="btn btn-amber" style="width:100%;justify-content:center">Book my free 15-min call →</button>
+                <div class="book-ok" id="bookOk">Request sent. We will email your Google Meet link to confirm your slot.</div>
+                <p class="form-note">This opens your email app addressed to info@digitreams.com with your day, time, timezone and service filled in. Just press send there.</p>
+              </form>
+            </div>
           </div>
         </div>
       </section>
@@ -1405,7 +1456,138 @@
           });
         })();
 
-        /* ---------- FAQ ---------- */
+        /* ---------- Booking: 15-min call (calendar + slots -> mailto) ---------- */
+        (function(){
+          var daysWrap = document.getElementById("bookDays");
+          var form = document.getElementById("bookForm");
+          if (!daysWrap || !form) return;
+          var pickedDay = "", pickedSlot = "";
+          var dayBox = document.getElementById("dayPickBox");
+          var slotBox = document.getElementById("slotPickBox");
+          var summary = document.getElementById("bookSummary");
+          var err = document.getElementById("bookErr");
+          var ok = document.getElementById("bookOk");
+          var visitorTz = "your local time";
+          try {
+            var detectedTz = Intl.DateTimeFormat().resolvedOptions().timeZone;
+            if (detectedTz) visitorTz = detectedTz;
+          } catch (e) { /* keep fallback label */ }
+          var tzLabel = document.getElementById("bookTzLabel");
+          if (tzLabel) tzLabel.textContent = "Your local time · " + visitorTz;
+          function updateSummary(){
+            if (pickedDay && pickedSlot){
+              summary.innerHTML = "Day picked: <strong>" + pickedDay + " at " + pickedSlot + "</strong>, in your local time (" + visitorTz + "). Send the form and we will email your Google Meet link to confirm your 15-minute slot.";
+            } else if (pickedDay){
+              summary.innerHTML = "Day picked: <strong>" + pickedDay + "</strong>. Now pick a time slot in your local time (" + visitorTz + ").";
+            } else if (pickedSlot){
+              summary.innerHTML = "Time picked: <strong>" + pickedSlot + "</strong> in your local time (" + visitorTz + "). Now pick a weekday.";
+            }
+          }
+          /* Next 14 days: weekdays selectable, Saturdays & Sundays off */
+          var wd = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"];
+          var wdLong = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+          var mon = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
+          var monLong = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+          var today = new Date();
+          for (var i = 0; i < 14; i++){
+            (function(offset){
+              var d = new Date(today.getFullYear(), today.getMonth(), today.getDate() + offset);
+              var dow = d.getDay();
+              var isWeekend = (dow === 0 || dow === 6);
+              var label = wdLong[dow] + ", " + d.getDate() + " " + monLong[d.getMonth()] + " " + d.getFullYear();
+              var b = document.createElement("button");
+              b.type = "button"; b.className = "day-btn";
+              b.setAttribute("data-day", label);
+              if (isWeekend){
+                b.classList.add("is-off");
+                b.disabled = true;
+                b.setAttribute("aria-disabled","true");
+                b.setAttribute("aria-label", label + ": off, no bookings on Saturdays and Sundays");
+                b.innerHTML = "<small></small><span></span><span class=\"off-lab\">Off</span>";
+                b.querySelector("small").textContent = wd[dow];
+                b.querySelectorAll("span")[0].textContent = d.getDate() + " " + mon[d.getMonth()];
+              } else {
+                b.setAttribute("aria-pressed","false");
+                b.setAttribute("aria-label", "Book on " + label);
+                b.innerHTML = "<small></small><span></span>";
+                b.querySelector("small").textContent = offset === 0 ? "Today" : wd[dow];
+                b.querySelector("span").textContent = d.getDate() + " " + mon[d.getMonth()];
+                b.addEventListener("click", function(){
+                  daysWrap.querySelectorAll(".day-btn:not(:disabled)").forEach(function(x){ x.setAttribute("aria-pressed","false"); });
+                  b.setAttribute("aria-pressed","true");
+                  pickedDay = label;
+                  dayBox.classList.remove("need-pick");
+                  updateSummary();
+                });
+              }
+              daysWrap.appendChild(b);
+            })(i);
+          }
+          var slotBtns = document.querySelectorAll("#bookSlots .slot-btn");
+          slotBtns.forEach(function(b){
+            b.addEventListener("click", function(){
+              slotBtns.forEach(function(x){ x.setAttribute("aria-pressed","false"); });
+              b.setAttribute("aria-pressed","true");
+              pickedSlot = b.getAttribute("data-slot");
+              slotBox.classList.remove("need-pick");
+              updateSummary();
+            });
+          });
+          /* Card CTAs: pre-select the service, then scroll to booking */
+          document.querySelectorAll("[data-book-service]").forEach(function(el){
+            el.addEventListener("click", function(e){
+              e.preventDefault();
+              var svc = el.getAttribute("data-book-service");
+              var sel = document.getElementById("bService");
+              if (sel && svc){
+                for (var j = 0; j < sel.options.length; j++){
+                  if (sel.options[j].value === svc || sel.options[j].text === svc){ sel.selectedIndex = j; break; }
+                }
+              }
+              document.getElementById("book").scrollIntoView({ behavior: reduced ? "auto" : "smooth" });
+              setTimeout(function(){
+                var firstDay = daysWrap.querySelector(".day-btn:not(:disabled)");
+                if (firstDay) firstDay.focus({ preventScroll:true });
+              }, reduced ? 60 : 650);
+            });
+          });
+          form.addEventListener("submit", function(ev){
+            ev.preventDefault();
+            var name = document.getElementById("bName").value.trim();
+            var mail = document.getElementById("bEmail").value.trim();
+            var whats = document.getElementById("bWhats").value.trim();
+            var svc = document.getElementById("bService").value;
+            var note = document.getElementById("bNote").value.trim();
+            var missingPick = !pickedDay || !pickedSlot;
+            if (missingPick){
+              if (!pickedDay) dayBox.classList.add("need-pick"); else dayBox.classList.remove("need-pick");
+              if (!pickedSlot) slotBox.classList.add("need-pick"); else slotBox.classList.remove("need-pick");
+              err.textContent = "Please pick a day and a time slot first. Choose one of each above, then send the form.";
+              err.classList.add("show");
+              document.getElementById("book").scrollIntoView({ block:"start", behavior: reduced ? "auto" : "smooth" });
+              return;
+            }
+            if (!name || !mail || mail.indexOf("@") < 1 || mail.indexOf(".") < 3){
+              err.textContent = "Please add your name and a valid email so we can send your Google Meet link.";
+              err.classList.add("show");
+              err.scrollIntoView({ block:"center", behavior: reduced ? "auto" : "smooth" });
+              return;
+            }
+            err.classList.remove("show");
+            var body = "Name: " + name + "\nEmail: " + mail + "\nWhatsApp: " + (whats || "Not provided") +
+                       "\nService: " + svc + "\nDay: " + pickedDay + "\nTime: " + pickedSlot + " (" + visitorTz + ", visitor's local time)" +
+                       "\nTimezone: " + visitorTz +
+                       "\nCall: 15 minutes on Google Meet\n\nNote:\n" + (note || "None") +
+                       "\n\nPlease email my Google Meet link to confirm this slot.";
+            var href = "mailto:info@digitreams.com?subject=" + encodeURIComponent("15-Min Call Booking") +
+                       "&body=" + encodeURIComponent(body);
+            ok.style.display = "block";
+            ok.textContent = "Request sent. We will email your Google Meet link to confirm your slot.";
+            window.location.href = href;
+          });
+        })();
+
+                /* ---------- FAQ ---------- */
         document.querySelectorAll(".faq-item").forEach(function(item){
           var q = item.querySelector(".faq-q");
           var a = item.querySelector(".faq-a");
